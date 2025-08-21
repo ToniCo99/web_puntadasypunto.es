@@ -1,0 +1,362 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const title = 'Servicios de Costura en Córdoba - Puntadas y Punto';
+const description = 'Descubre todos nuestros servicios de costura en Córdoba: clases de costura, confección a medida, trajes de flamenca, patronaje y transformación de prendas. Calidad artesanal y más de 20 años de experiencia.';
+
+const breadcrumbs = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Servicios' }
+];
+
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Servicios de costura artesanal",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Puntadas y Punto"
+  },
+  "serviceType": [
+    "Clases de costura",
+    "Confección a medida", 
+    "Patronaje",
+    "Trajes de flamenca",
+    "Transformación de prendas",
+    "Disfraces a medida"
+  ],
+  "areaServed": {
+    "@type": "City",
+    "name": "Córdoba",
+    "addressCountry": "ES"
+  }
+};
+---
+
+<Layout title={title} description={description} schema={servicesSchema}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="py-16 bg-gradient-to-br from-cream-100 to-cream-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+        Nuestros <span class="text-burgundy-700">Servicios de Costura</span> en Córdoba
+      </h1>
+      <p class="text-xl text-gray-700 leading-relaxed">
+        Desde la enseñanza de costura tradicional hasta la confección de prendas únicas. 
+        Descubre todo lo que podemos hacer por ti con más de 20 años de experiencia.
+      </p>
+    </div>
+  </section>
+
+  <!-- Grid de servicios -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Clases de costura -->
+        <div class="card group">
+          <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+            <img
+              src="/images/taller-costura-aprendizaje-alumnas-cordoba.jpg"
+              alt="Clases de costura en Córdoba - Grupos reducidos y enseñanza personalizada"
+              class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              width="400"
+              height="300"
+            />
+          </div>
+          <div class="card-content">
+            <h2 class="text-xl font-semibold text-gray-900 mb-3">Clases de Costura</h2>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Aprende costura desde nivel básico hasta avanzado en grupos reducidos. 
+              Metodología personalizada con materiales incluidos y seguimiento individual.
+            </p>
+            <ul class="text-sm text-gray-600 mb-6 space-y-1">
+              <li>• Nivel básico, intermedio y avanzado</li>
+              <li>• Máximo 8 alumnas por clase</li>
+              <li>• Materiales incluidos</li>
+              <li>• Certificado de aprovechamiento</li>
+            </ul>
+            <a href="/servicios/clases-de-costura/" class="btn btn-primary w-full">
+              Más información
+            </a>
+          </div>
+        </div>
+
+        <!-- Confección a medida -->
+        <div class="card group">
+          <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+            <img
+              src="/images/vestido-fiesta-azul-encaje-espalda-abierta-cordoba.jpg"
+              alt="Confección a medida en Córdoba - Vestidos de fiesta y prendas únicas"
+              class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              width="400"
+              height="300"
+            />
+          </div>
+          <div class="card-content">
+            <h2 class="text-xl font-semibold text-gray-900 mb-3">Confección a Medida</h2>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Creamos prendas únicas adaptadas perfectamente a tu cuerpo y estilo. 
+              Vestidos de fiesta, trajes, ropa infantil y mucho más.
+            </p>
+            <ul class="text-sm text-gray-600 mb-6 space-y-1">
+              <li>• Vestidos de fiesta y ceremonia</li>
+              <li>• Trajes y conjuntos</li>
+              <li>• Ropa infantil personalizada</li>
+              <li>• Patronaje individual</li>
+            </ul>
+            <a href="/servicios/confeccion-a-medida/" class="btn btn-primary w-full">
+              Ver trabajos
+            </a>
+          </div>
+        </div>
+
+        <!-- Trajes de flamenca -->
+        <div class="card group">
+          <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+            <img
+              src="/images/vestido-flamenca-beige-elegante-cordoba.jpg"
+              alt="Trajes de flamenca hechos a mano en Córdoba - Tradición y elegancia"
+              class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              width="400"
+              height="300"
+            />
+          </div>
+          <div class="card-content">
+            <h2 class="text-xl font-semibold text-gray-900 mb-3">Trajes de Flamenca</h2>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Especialistas en trajes de flamenca tradicionales y modernos. 
+              Cada traje es una obra de arte única hecha completamente a mano.
+            </p>
+            <ul class="text-sm text-gray-600 mb-6 space-y-1">
+              <li>• Trajes clásicos y modernos</li>
+              <li>• Adulto e infantil</li>
+              <li>• Todos los complementos</li>
+              <li>• Asesoramiento de color y estilo</li>
+            </ul>
+            <a href="/servicios/trajes-de-flamenca/" class="btn btn-primary w-full">
+              Ver galería
+            </a>
+          </div>
+        </div>
+
+        <!-- Patronaje a medida -->
+        <div class="card group">
+          <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+            <img
+              src="/images/taller-costura-ajuste-falda-cordoba.jpg"
+              alt="Patronaje a medida en Córdoba - Técnicas profesionales de costura"
+              class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              width="400"
+              height="300"
+            />
+          </div>
+          <div class="card-content">
+            <h2 class="text-xl font-semibold text-gray-900 mb-3">Patronaje a Medida</h2>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Creación de patrones personalizados adaptados a medidas exactas. 
+              Base fundamental para una confección perfecta.
+            </p>
+            <ul class="text-sm text-gray-600 mb-6 space-y-1">
+              <li>• Patrones base personalizados</li>
+              <li>• Escalado de tallas</li>
+              <li>• Enseñanza de patronaje</li>
+              <li>• Corrección de patrones</li>
+            </ul>
+            <a href="/servicios/patronaje-a-medida/" class="btn btn-primary w-full">
+              Solicitar patrón
+            </a>
+          </div>
+        </div>
+
+        <!-- Transformación de prendas -->
+        <div class="card group">
+          <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+            <img
+              src="/images/chaqueta-roja-vintage-botones-metalicos-cordoba.jpg"
+              alt="Transformación de prendas en Córdoba - Arreglos y modificaciones"
+              class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              width="400"
+              height="300"
+            />
+          </div>
+          <div class="card-content">
+            <h2 class="text-xl font-semibold text-gray-900 mb-3">Transformación de Prendas</h2>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Dale nueva vida a tus prendas favoritas. Arreglos, modificaciones y 
+              transformaciones completas para adaptar la ropa a tus necesidades.
+            </p>
+            <ul class="text-sm text-gray-600 mb-6 space-y-1">
+              <li>• Ajustes de talla</li>
+              <li>• Cambios de estilo</li>
+              <li>• Reparaciones especializadas</li>
+              <li>• Modernización de prendas vintage</li>
+            </ul>
+            <a href="/servicios/transformacion-de-prendas/" class="btn btn-primary w-full">
+              Consultar
+            </a>
+          </div>
+        </div>
+
+        <!-- Disfraces a medida -->
+        <div class="card group">
+          <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+            <img
+              src="/images/vestuario-epoca-medieval-obras-teatro-cordoba.jpg"
+              alt="Disfraces a medida en Córdoba - Vestuario teatral y de época"
+              class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              width="400"
+              height="300"
+            />
+          </div>
+          <div class="card-content">
+            <h2 class="text-xl font-semibold text-gray-900 mb-3">Disfraces a Medida</h2>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Disfraces únicos y vestuario teatral. Desde disfraces infantiles hasta 
+              trajes de época para obras de teatro y eventos temáticos.
+            </p>
+            <ul class="text-sm text-gray-600 mb-6 space-y-1">
+              <li>• Disfraces infantiles y adultos</li>
+              <li>• Vestuario teatral</li>
+              <li>• Trajes de época</li>
+              <li>• Complementos incluidos</li>
+            </ul>
+            <a href="/servicios/disfraces-a-medida/" class="btn btn-primary w-full">
+              Ver ejemplos
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          Preguntas Frecuentes sobre Nuestros Servicios
+        </h2>
+        <p class="text-lg text-gray-600">
+          Resolvemos las dudas más comunes sobre nuestros servicios de costura en Córdoba
+        </p>
+      </div>
+
+      <div class="space-y-6">
+        <div class="bg-white rounded-lg shadow-sm p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">
+            ¿Qué incluyen las clases de costura?
+          </h3>
+          <p class="text-gray-600">
+            Nuestras clases incluyen todos los materiales básicos (hilos, agujas, tijeras), 
+            uso de máquinas de coser profesionales, patrones para práctica y seguimiento 
+            personalizado. Solo necesitas traer ganas de aprender.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">
+            ¿Cuánto tiempo tarda una prenda a medida?
+          </h3>
+          <p class="text-gray-600">
+            El tiempo depende de la complejidad de la prenda. Un vestido sencillo puede 
+            estar listo en 2-3 semanas, mientras que un traje de flamenca o vestido de 
+            novia puede requerir 4-6 semanas. Siempre acordamos los plazos previamente.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">
+            ¿Realizan arreglos urgentes?
+          </h3>
+          <p class="text-gray-600">
+            Sí, ofrecemos servicio de arreglos urgentes con recargo. Podemos realizar 
+            ajustes básicos en 24-48 horas. Consulta disponibilidad llamando directamente 
+            al taller.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">
+            ¿Hay descuentos para varios servicios?
+          </h3>
+          <p class="text-gray-600">
+            Ofrecemos descuentos especiales para alumnas de nuestras clases que soliciten 
+            servicios de confección, y precios especiales para grupos familiares. 
+            Consulta nuestras ofertas actuales.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-burgundy-700 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+        ¿Qué Servicio Necesitas?
+      </h2>
+      <p class="text-xl mb-8 opacity-90">
+        Contáctanos para una consulta personalizada. Te asesoramos sin compromiso 
+        sobre el mejor servicio para tu proyecto.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contacto/" class="bg-white text-burgundy-700 hover:bg-gray-100 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Solicitar información
+        </a>
+        <a href="tel:+34699869097" class="border-2 border-white text-white hover:bg-white hover:text-burgundy-700 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Llamar ahora
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué incluyen las clases de costura?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nuestras clases incluyen todos los materiales básicos (hilos, agujas, tijeras), uso de máquinas de coser profesionales, patrones para práctica y seguimiento personalizado. Solo necesitas traer ganas de aprender."
+      }
+    },
+    {
+      "@type": "Question", 
+      "name": "¿Cuánto tiempo tarda una prenda a medida?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El tiempo depende de la complejidad de la prenda. Un vestido sencillo puede estar listo en 2-3 semanas, mientras que un traje de flamenca o vestido de novia puede requerir 4-6 semanas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Realizan arreglos urgentes?", 
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, ofrecemos servicio de arreglos urgentes con recargo. Podemos realizar ajustes básicos en 24-48 horas. Consulta disponibilidad llamando directamente al taller."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hay descuentos para varios servicios?",
+      "acceptedAnswer": {
+        "@type": "Answer", 
+        "text": "Ofrecemos descuentos especiales para alumnas de nuestras clases que soliciten servicios de confección, y precios especiales para grupos familiares."
+      }
+    }
+  ]
+}
+</script>

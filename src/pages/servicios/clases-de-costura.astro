@@ -1,0 +1,528 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const title = 'Clases de Costura en Córdoba - Aprende desde Cero | Puntadas y Punto';
+const description = 'Clases de costura en Córdoba para todos los niveles. Grupos reducidos, materiales incluidos y seguimiento personalizado. Aprende costura tradicional y patronaje con más de 20 años de experiencia.';
+
+const breadcrumbs = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Servicios', href: '/servicios/' },
+  { label: 'Clases de costura' }
+];
+
+const courseSchema = {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Clases de costura y patronaje",
+  "description": "Curso completo de costura desde nivel básico hasta avanzado",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Puntadas y Punto",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Glorieta de los Países Bálticos 1, Oficina 11",
+      "addressLocality": "Córdoba",
+      "postalCode": "14014",
+      "addressCountry": "ES"
+    }
+  },
+  "courseMode": "Presencial",
+  "educationalLevel": "Principiante a Avanzado",
+  "timeRequired": "P3M",
+  "inLanguage": "es",
+  "isAccessibleForFree": false,
+  "teaches": [
+    "Técnicas básicas de costura",
+    "Uso de máquina de coser",
+    "Patronaje y confección",
+    "Acabados profesionales"
+  ]
+};
+---
+
+<Layout title={title} description={description} schema={courseSchema}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="py-16 bg-gradient-to-br from-cream-100 to-cream-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <span class="text-burgundy-700">Clases de Costura</span> en Córdoba
+          </h1>
+          <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+            Aprende costura desde cero o perfecciona tu técnica en nuestro taller artesanal. 
+            Más de 20 años formando costureras con grupos reducidos y atención personalizada.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#niveles" class="btn btn-primary">
+              Ver niveles
+            </a>
+            <a href="/contacto/" class="btn btn-secondary">
+              Solicitar plaza
+            </a>
+          </div>
+        </div>
+        <div>
+          <img
+            src="/images/taller-costura-aprendizaje-alumnas-cordoba.jpg"
+            alt="Clases de costura en Puntadas y Punto Córdoba - Alumnas aprendiendo técnicas de costura"
+            class="rounded-lg shadow-xl w-full h-auto object-cover"
+            loading="eager"
+            width="600"
+            height="400"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Características destacadas -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          ¿Por Qué Elegir Nuestras Clases?
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Ofrecemos una experiencia de aprendizaje única, combinando tradición, 
+          técnica y atención personalizada en cada clase.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-burgundy-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-burgundy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Grupos Reducidos</h3>
+          <p class="text-gray-600 text-sm">
+            Máximo 8 alumnas por clase para garantizar atención personalizada y seguimiento individual.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-burgundy-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-burgundy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Materiales Incluidos</h3>
+          <p class="text-gray-600 text-sm">
+            Todos los materiales básicos incluidos: hilos, agujas, tijeras, patrones y telas para práctica.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-burgundy-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-burgundy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Certificado</h3>
+          <p class="text-gray-600 text-sm">
+            Al completar cada nivel recibes un certificado de aprovechamiento que acredita tus conocimientos.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-burgundy-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-burgundy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Horarios Flexibles</h3>
+          <p class="text-gray-600 text-sm">
+            Clases de mañana y tarde adaptadas a tu disponibilidad. Recuperación de clases perdidas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Niveles de cursos -->
+  <section id="niveles" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Niveles de Nuestras Clases de Costura
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Programa estructurado por niveles para un aprendizaje progresivo y sólido, 
+          desde tus primeras puntadas hasta técnicas avanzadas de confección.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Nivel Básico -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-burgundy-500 to-burgundy-600 px-6 py-4">
+            <h3 class="text-xl font-bold text-white">Nivel Básico</h3>
+            <p class="text-burgundy-100">Para principiantes absolutos</p>
+          </div>
+          <div class="p-6">
+            <div class="mb-6">
+              <span class="text-3xl font-bold text-gray-900">3</span>
+              <span class="text-gray-600 ml-1">meses</span>
+            </div>
+            
+            <h4 class="font-semibold text-gray-900 mb-3">Aprenderás:</h4>
+            <ul class="space-y-2 text-gray-600 mb-6">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Manejo básico de la máquina de coser
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Puntadas básicas a mano y máquina
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Costura de costuras rectas y curvas
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Cremalleras y botones básicos
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Confección de funda de almohada y falda simple
+              </li>
+            </ul>
+            
+            <div class="text-center">
+              <p class="text-sm text-gray-500 mb-4">Duración: 12 clases de 2 horas</p>
+              <a href="/contacto/" class="btn btn-primary">
+                Solicitar información
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nivel Intermedio -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-burgundy-600 to-burgundy-700 px-6 py-4">
+            <h3 class="text-xl font-bold text-white">Nivel Intermedio</h3>
+            <p class="text-burgundy-100">Para quienes tienen nociones básicas</p>
+          </div>
+          <div class="p-6">
+            <div class="mb-6">
+              <span class="text-3xl font-bold text-gray-900">4</span>
+              <span class="text-gray-600 ml-1">meses</span>
+            </div>
+            
+            <h4 class="font-semibold text-gray-900 mb-3">Aprenderás:</h4>
+            <ul class="space-y-2 text-gray-600 mb-6">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Patronaje básico y modificaciones
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Mangas básicas y sisas
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Cuellos y escotes diversos
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Acabados invisibles
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Confección de blusa y pantalón básico
+              </li>
+            </ul>
+            
+            <div class="text-center">
+              <p class="text-sm text-gray-500 mb-4">Duración: 16 clases de 2 horas</p>
+              <a href="/contacto/" class="btn btn-primary">
+                Solicitar información
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nivel Avanzado -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-burgundy-700 to-burgundy-800 px-6 py-4">
+            <h3 class="text-xl font-bold text-white">Nivel Avanzado</h3>
+            <p class="text-burgundy-100">Para perfeccionar técnicas</p>
+          </div>
+          <div class="p-6">
+            <div class="mb-6">
+              <span class="text-3xl font-bold text-gray-900">6</span>
+              <span class="text-gray-600 ml-1">meses</span>
+            </div>
+            
+            <h4 class="font-semibold text-gray-900 mb-3">Aprenderás:</h4>
+            <ul class="space-y-2 text-gray-600 mb-6">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Patronaje complejo y entallado
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Técnicas de sastrería
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Forros y estructuras internas
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Acabados profesionales
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Confección de vestido completo o chaqueta
+              </li>
+            </ul>
+            
+            <div class="text-center">
+              <p class="text-sm text-gray-500 mb-4">Duración: 24 clases de 2 horas</p>
+              <a href="/contacto/" class="btn btn-primary">
+                Solicitar información
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Horarios y precios -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Horarios y Modalidades
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Ofrecemos diferentes horarios para adaptarnos a tu disponibilidad. 
+          Elige la modalidad que mejor se ajuste a tu ritmo de vida.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Horarios -->
+        <div class="bg-gray-50 rounded-lg p-8">
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Horarios Disponibles</h3>
+          
+          <div class="space-y-4">
+            <div class="flex justify-between items-center p-4 bg-white rounded-lg">
+              <div>
+                <div class="font-semibold text-gray-900">Mañanas</div>
+                <div class="text-sm text-gray-600">Lunes a Viernes</div>
+              </div>
+              <div class="text-burgundy-700 font-semibold">10:00 - 12:00</div>
+            </div>
+            
+            <div class="flex justify-between items-center p-4 bg-white rounded-lg">
+              <div>
+                <div class="font-semibold text-gray-900">Tardes</div>
+                <div class="text-sm text-gray-600">Lunes a Viernes</div>
+              </div>
+              <div class="text-burgundy-700 font-semibold">18:00 - 20:00</div>
+            </div>
+            
+            <div class="flex justify-between items-center p-4 bg-white rounded-lg">
+              <div>
+                <div class="font-semibold text-gray-900">Intensivo sábados</div>
+                <div class="text-sm text-gray-600">Una vez al mes</div>
+              </div>
+              <div class="text-burgundy-700 font-semibold">10:00 - 14:00</div>
+            </div>
+          </div>
+
+          <div class="mt-6 p-4 bg-burgundy-50 rounded-lg border border-burgundy-200">
+            <h4 class="font-semibold text-burgundy-900 mb-2">Importante</h4>
+            <ul class="text-sm text-burgundy-800 space-y-1">
+              <li>• Clases de 2 horas, 2 veces por semana</li>
+              <li>• Máximo 8 alumnas por grupo</li>
+              <li>• Posibilidad de recuperar clases perdidas</li>
+              <li>• Descuento familiar disponible</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Información adicional -->
+        <div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Lo Que Incluye el Curso</h3>
+          
+          <div class="space-y-4 mb-8">
+            <div class="flex items-start space-x-3">
+              <svg class="w-6 h-6 text-burgundy-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <div class="font-semibold text-gray-900">Materiales básicos</div>
+                <div class="text-gray-600 text-sm">Hilos, agujas, tijeras, alfileres, metro, jaboncillo</div>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-3">
+              <svg class="w-6 h-6 text-burgundy-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <div class="font-semibold text-gray-900">Uso de máquinas</div>
+                <div class="text-gray-600 text-sm">Máquinas de coser profesionales y overlock</div>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-3">
+              <svg class="w-6 h-6 text-burgundy-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <div class="font-semibold text-gray-900">Patrones y telas para práctica</div>
+                <div class="text-gray-600 text-sm">Para los primeros proyectos de cada nivel</div>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-3">
+              <svg class="w-6 h-6 text-burgundy-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <div class="font-semibold text-gray-900">Manual de técnicas</div>
+                <div class="text-gray-600 text-sm">Guía ilustrada con todas las técnicas del curso</div>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-3">
+              <svg class="w-6 h-6 text-burgundy-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <div class="font-semibold text-gray-900">Certificado de aprovechamiento</div>
+                <div class="text-gray-600 text-sm">Al completar satisfactoriamente cada nivel</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-cream-100 rounded-lg p-6">
+            <h4 class="font-semibold text-gray-900 mb-3">¿Necesitas traer algo?</h4>
+            <p class="text-gray-700 mb-4">
+              Solo necesitas traer ganas de aprender y, opcionalmente, un cuaderno para tomar notas. 
+              Todo lo demás está incluido en el curso.
+            </p>
+            <p class="text-sm text-gray-600">
+              Para proyectos avanzados te asesoraremos sobre qué telas y materiales específicos necesitas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ específicas de clases -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          Preguntas Frecuentes sobre las Clases
+        </h2>
+      </div>
+
+      <div class="space-y-6">
+        <div class="bg-white rounded-lg shadow-sm p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">
+            ¿Puedo empezar sin ningún conocimiento previo?
+          </h3>
+          <p class="text-gray-600">
+            ¡Por supuesto! Nuestro nivel básico está diseñado específicamente para personas que nunca han cosido. 
+            Empezamos desde lo más fundamental: cómo enhebrar una aguja y hacer las primeras puntadas.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">
+            ¿Qué pasa si falto a una clase?
+          </h3>
+          <p class="text-gray-600">
+            Puedes recuperar la clase en otro grupo del mismo nivel, previa coordinación. También te proporcionamos 
+            resúmenes de lo visto para que no te pierdas nada importante.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">
+            ¿Cuántas personas hay por clase?
+          </h3>
+          <p class="text-gray-600">
+            Mantenemos grupos pequeños de máximo 8 alumnas para garantizar atención personalizada. 
+            Esto nos permite adaptar el ritmo a las necesidades de cada una.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">
+            ¿Puedo continuar al siguiente nivel automáticamente?
+          </h3>
+          <p class="text-gray-600">
+            Al finalizar cada nivel evaluamos el progreso. La mayoría continúa sin problemas, pero si necesitas 
+            reforzar algún concepto, te recomendaremos repetir algunas clases específicas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-burgundy-700 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+        ¿Lista para Empezar tu Aventura en la Costura?
+      </h2>
+      <p class="text-xl mb-8 opacity-90">
+        Únete a las más de 500 alumnas que han aprendido costura en nuestro taller. 
+        Tu primera clase puede ser el inicio de una nueva pasión.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contacto/" class="bg-white text-burgundy-700 hover:bg-gray-100 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Solicitar plaza
+        </a>
+        <a href="tel:+34699869097" class="border-2 border-white text-white hover:bg-white hover:text-burgundy-700 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Llamar ahora
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

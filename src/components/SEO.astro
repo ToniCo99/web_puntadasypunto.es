@@ -1,0 +1,141 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  canonicalUrl: string;
+  noindex?: boolean;
+  schema?: any;
+}
+
+const {
+  title,
+  description,
+  image = '/images/taller-costura-cordoba-hero.jpg',
+  canonicalUrl,
+  noindex = false,
+  schema
+} = Astro.props;
+
+const fullTitle = title.includes('Puntadas y Punto') ? title : `${title} | Puntadas y Punto`;
+const imageUrl = new URL(image, Astro.site);
+---
+
+<!-- SEO Meta Tags -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Title and Description -->
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalUrl} />
+
+<!-- Robots -->
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/manifest.webmanifest" />
+<meta name="theme-color" content="#8B1538" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:image" content={imageUrl} />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:site_name" content="Puntadas y Punto" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageUrl} />
+
+<!-- Local Business Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://puntadasypunto.es",
+  "name": "Puntadas y Punto",
+  "description": "Taller artesanal de costura y patronaje en Córdoba. Escuela de costura, confección a medida y trajes de flamenca.",
+  "url": "https://puntadasypunto.es",
+  "telephone": "+34699869097",
+  "email": "lolapedraza@hotmail.es",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Glorieta de los Países Bálticos 1, Oficina 11",
+    "addressLocality": "Córdoba",
+    "postalCode": "14014",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "37.8846",
+    "longitude": "-4.7709"
+  },
+  "openingHours": [
+    "Mo-Fr 10:00-13:30",
+    "Mo-Fr 17:30-20:30"
+  ],
+  "priceRange": "€€",
+  "paymentAccepted": "Cash, Credit Card",
+  "currenciesAccepted": "EUR",
+  "serviceType": [
+    "Clases de costura",
+    "Confección a medida",
+    "Patronaje",
+    "Trajes de flamenca",
+    "Arreglos de ropa",
+    "Transformación de prendas"
+  ],
+  "areaServed": {
+    "@type": "City",
+    "name": "Córdoba",
+    "addressCountry": "ES"
+  },
+  "foundingDate": "2000",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de costura",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Course",
+          "name": "Clases de costura y patronaje",
+          "description": "Cursos de costura desde nivel básico a avanzado en grupos reducidos"
+        }
+      },
+      {
+        "@type": "Offer", 
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Confección a medida",
+          "description": "Confección artesanal de vestidos, trajes y prendas personalizadas"
+        }
+      }
+    ]
+  },
+  "sameAs": []
+})} />
+
+<!-- Custom Schema -->
+{schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
+
+<!-- DNS Prefetch -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+<!-- Google Fonts Preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />

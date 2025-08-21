@@ -1,0 +1,510 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const title = 'Los 5 errores más comunes al coser y cómo evitarlos - Puntadas y Punto';
+const description = 'Guía completa para principiantes sobre los errores más frecuentes en costura y las técnicas profesionales para solucionarlos. Consejos de expertos con más de 20 años de experiencia.';
+
+const breadcrumbs = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Blog', href: '/blog/' },
+  { label: 'Errores comunes en costura' }
+];
+
+const publishDate = '2024-08-20';
+const readTime = '8 min';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Los 5 errores más comunes al coser y cómo evitarlos",
+  "description": description,
+  "author": {
+    "@type": "LocalBusiness",
+    "name": "Puntadas y Punto"
+  },
+  "publisher": {
+    "@type": "LocalBusiness",
+    "name": "Puntadas y Punto",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://puntadasypunto.es/images/logo-puntadas-y-punto.png"
+    }
+  },
+  "datePublished": publishDate,
+  "dateModified": publishDate,
+  "image": "https://puntadasypunto.es/images/taller-costura-ajuste-falda-cordoba.jpg",
+  "url": "https://puntadasypunto.es/blog/errores-comunes-costura-como-evitarlos/"
+};
+---
+
+<Layout title={title} description={description} schema={articleSchema}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero del artículo -->
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Encabezado -->
+    <header class="mb-12">
+      <div class="flex items-center space-x-2 text-sm text-gray-500 mb-4">
+        <span class="bg-burgundy-100 text-burgundy-800 px-3 py-1 rounded-full font-medium">Técnicas</span>
+        <span>•</span>
+        <time datetime={publishDate}>20 de agosto de 2024</time>
+        <span>•</span>
+        <span>{readTime} de lectura</span>
+      </div>
+      
+      <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+        Los 5 errores más comunes al coser y cómo evitarlos
+      </h1>
+      
+      <p class="text-xl text-gray-600 leading-relaxed mb-8">
+        Después de más de 20 años enseñando costura en nuestro taller de Córdoba, hemos identificado los errores que cometen prácticamente todas las principiantes. La buena noticia es que todos tienen solución fácil.
+      </p>
+      
+      <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mb-8">
+        <img
+          src="/images/taller-costura-ajuste-falda-cordoba.jpg"
+          alt="Proceso de ajuste y corrección en el taller de costura Puntadas y Punto en Córdoba"
+          class="w-full h-96 object-cover"
+          loading="eager"
+          width="800"
+          height="400"
+        />
+      </div>
+    </header>
+
+    <!-- Índice -->
+    <div class="bg-cream-100 rounded-lg p-6 mb-12 border border-cream-200">
+      <h2 class="text-lg font-semibold text-gray-900 mb-4">Índice del artículo</h2>
+      <ol class="space-y-2 text-gray-700">
+        <li><a href="#error-1" class="hover:text-burgundy-700 transition-colors">1. No tomar las medidas correctamente</a></li>
+        <li><a href="#error-2" class="hover:text-burgundy-700 transition-colors">2. Saltarse el hilvanado</a></li>
+        <li><a href="#error-3" class="hover:text-burgundy-700 transition-colors">3. No planchar en cada paso</a></li>
+        <li><a href="#error-4" class="hover:text-burgundy-700 transition-colors">4. Usar el hilo y la aguja incorrectos</a></li>
+        <li><a href="#error-5" class="hover:text-burgundy-700 transition-colors">5. No hacer pruebas en la tela</a></li>
+        <li><a href="#consejos-generales" class="hover:text-burgundy-700 transition-colors">Consejos generales para evitar errores</a></li>
+        <li><a href="#faq" class="hover:text-burgundy-700 transition-colors">Preguntas frecuentes</a></li>
+      </ol>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="prose prose-lg max-w-none">
+      
+      <!-- Introducción -->
+      <p class="text-lg leading-relaxed mb-8">
+        Cuando alguien se inicia en el mundo de la costura, es completamente natural cometer errores. En nuestras clases de costura en Córdoba, vemos estos mismos errores una y otra vez, pero también sabemos exactamente cómo solucionarlos. Lo más importante es entender que <strong>cada error es una oportunidad de aprendizaje</strong>.
+      </p>
+
+      <p class="mb-8">
+        La costura es un arte que requiere paciencia, precisión y mucha práctica. Durante estos años formando a más de 500 alumnas, hemos desarrollado métodos efectivos para prevenir los errores más comunes y, cuando ocurren, corregirlos sin que afecten al resultado final.
+      </p>
+
+      <!-- Error 1 -->
+      <section id="error-1" class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">1. No tomar las medidas correctamente</h2>
+        
+        <div class="bg-red-50 border border-red-200 rounded-lg p-6 mb-6">
+          <h3 class="text-lg font-semibold text-red-900 mb-3">❌ El error más costoso</h3>
+          <p class="text-red-800">
+            Tomar las medidas de forma incorrecta es el error que más dinero y tiempo cuesta. Una medida mal tomada puede arruinar todo un proyecto, especialmente en prendas ajustadas.
+          </p>
+        </div>
+
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">Por qué ocurre este error:</h3>
+        <ul class="list-disc list-inside space-y-2 mb-6">
+          <li>Medir sobre ropa gruesa en lugar de ropa interior o ropa ajustada</li>
+          <li>No mantener el metro en posición horizontal</li>
+          <li>Apretar demasiado o dejar muy suelto el metro</li>
+          <li>No anotar las medidas inmediatamente</li>
+          <li>Medir en posturas no naturales</li>
+        </ul>
+
+        <div class="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
+          <h3 class="text-lg font-semibold text-green-900 mb-3">✅ Cómo hacerlo correctamente</h3>
+          <div class="text-green-800 space-y-3">
+            <p><strong>Preparación:</strong> Usa ropa interior o ropa muy ajustada. Mantén una postura natural y relajada.</p>
+            <p><strong>Técnica:</strong> El metro debe estar firme pero sin apretar. Siempre paralelo al suelo en medidas horizontales.</p>
+            <p><strong>Orden:</strong> Sigue siempre el mismo orden: contorno de pecho, cintura, cadera, largo de espalda, largo de manga.</p>
+            <p><strong>Verificación:</strong> Repite cada medida dos veces y anótala inmediatamente.</p>
+          </div>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+          <h4 class="font-semibold text-blue-900 mb-2">💡 Consejo profesional</h4>
+          <p class="text-blue-800">
+            En nuestro taller siempre decimos: "Mide dos veces, corta una vez". Invertir 10 minutos extra en tomar medidas correctas te ahorrará horas de correcciones posteriores.
+          </p>
+        </div>
+      </section>
+
+      <!-- Error 2 -->
+      <section id="error-2" class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">2. Saltarse el hilvanado</h2>
+        
+        <p class="mb-6">
+          El hilvanado es una costura provisional que muchas principiantes consideran una pérdida de tiempo. Sin embargo, es uno de los pasos más importantes para conseguir un acabado profesional.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">¿Qué es exactamente el hilvanado?</h3>
+        <p class="mb-6">
+          El hilvanado consiste en unir las piezas de tela con puntadas largas y poco apretadas antes de hacer la costura definitiva. Es como hacer un "borrador" de la costura final.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">Ventajas del hilvanado:</h3>
+        <ul class="list-disc list-inside space-y-2 mb-6">
+          <li><strong>Control total:</strong> Puedes probar el ajuste antes de coser definitivamente</li>
+          <li><strong>Costuras perfectas:</strong> Las telas no se mueven durante la costura final</li>
+          <li><strong>Ahorro de tiempo:</strong> Es más rápido rehacer un hilván que descoser una costura</li>
+          <li><strong>Mejor resultado:</strong> Las costuras quedan más rectas y uniformes</li>
+        </ul>
+
+        <div class="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
+          <h4 class="font-semibold text-amber-900 mb-2">🎯 Cuándo es imprescindible hilvanar</h4>
+          <ul class="text-amber-800 space-y-1">
+            <li>• Al montar mangas</li>
+            <li>• En costuras curvas</li>
+            <li>• Al unir telas de diferente textura</li>
+            <li>• En prendas ajustadas</li>
+            <li>• Cuando trabajas con telas resbaladizas</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Error 3 -->
+      <section id="error-3" class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">3. No planchar en cada paso</h2>
+        
+        <p class="mb-6">
+          "Planchar es la mitad de la costura", es una frase que repetimos constantemente en nuestras clases. Una prenda bien planchada en cada paso del proceso se ve profesional incluso con técnicas básicas.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">La regla de oro del planchado:</h3>
+        <p class="mb-6 text-lg font-medium text-burgundy-700">
+          Plancha después de cada costura, antes de hacer la siguiente.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">Técnicas correctas de planchado:</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h4 class="font-semibold text-gray-900 mb-2">Para costuras:</h4>
+            <ul class="text-gray-700 text-sm space-y-1">
+              <li>• Plancha la costura cerrada primero</li>
+              <li>• Luego abre y plancha hacia un lado</li>
+              <li>• Usa vapor para tejidos naturales</li>
+              <li>• Protege tejidos delicados con papel</li>
+            </ul>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h4 class="font-semibold text-gray-900 mb-2">Para dobladillos:</h4>
+            <ul class="text-gray-700 text-sm space-y-1">
+              <li>• Marca con alfileres primero</li>
+              <li>• Plancha con movimientos rectos</li>
+              <li>• No estires la tela al planchar</li>
+              <li>• Deja enfriar antes de manipular</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-purple-50 border border-purple-200 rounded-lg p-6 mb-8">
+          <h4 class="font-semibold text-purple-900 mb-2">🔥 Temperaturas según el tejido</h4>
+          <div class="text-purple-800 grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <p><strong>Baja:</strong> Seda, lana, sintéticos</p>
+              <p><strong>Media:</strong> Algodón, lino mezcla</p>
+            </div>
+            <div>
+              <p><strong>Alta:</strong> Lino puro, algodón grueso</p>
+              <p><strong>Vapor:</strong> Ideal para la mayoría</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Error 4 -->
+      <section id="error-4" class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">4. Usar el hilo y la aguja incorrectos</h2>
+        
+        <p class="mb-6">
+          Muchas principiantes usan la misma aguja y el mismo hilo para todo tipo de telas. Esto es como usar el mismo pincel para acuarela y óleo: técnicamente se puede, pero el resultado no será óptimo.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">Guía rápida de agujas:</h3>
+        
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full border-collapse border border-gray-300">
+            <thead>
+              <tr class="bg-gray-50">
+                <th class="border border-gray-300 px-4 py-2 text-left">Número de aguja</th>
+                <th class="border border-gray-300 px-4 py-2 text-left">Tipo de tela</th>
+                <th class="border border-gray-300 px-4 py-2 text-left">Ejemplos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2">70/10 - 80/12</td>
+                <td class="border border-gray-300 px-4 py-2">Telas finas</td>
+                <td class="border border-gray-300 px-4 py-2">Seda, gasa, batista</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="border border-gray-300 px-4 py-2">90/14 - 100/16</td>
+                <td class="border border-gray-300 px-4 py-2">Telas medias</td>
+                <td class="border border-gray-300 px-4 py-2">Algodón, lino, punto</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2">110/18 - 120/19</td>
+                <td class="border border-gray-300 px-4 py-2">Telas gruesas</td>
+                <td class="border border-gray-300 px-4 py-2">Vaquero, lona, tapicería</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">Tipos de hilo según el proyecto:</h3>
+        <ul class="list-disc list-inside space-y-2 mb-6">
+          <li><strong>Algodón:</strong> Para telas naturales y uso general</li>
+          <li><strong>Poliéster:</strong> Resistente, ideal para ropa deportiva</li>
+          <li><strong>Seda:</strong> Para telas delicadas y costuras invisibles</li>
+          <li><strong>Nylon:</strong> Para tejidos elásticos y trajes de baño</li>
+        </ul>
+
+        <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-6 mb-8">
+          <h4 class="font-semibold text-indigo-900 mb-2">🧵 Regla práctica</h4>
+          <p class="text-indigo-800">
+            El hilo debe ser siempre un tono más oscuro que la tela. Si no encuentras el color exacto, opta por el más oscuro de los disponibles.
+          </p>
+        </div>
+      </section>
+
+      <!-- Error 5 -->
+      <section id="error-5" class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">5. No hacer pruebas en la tela</h2>
+        
+        <p class="mb-6">
+          Ir directamente a coser la prenda sin hacer pruebas es como conducir por una carretera desconocida sin mapa. Cada tela se comporta de manera diferente, y lo que funciona con una puede ser un desastre con otra.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">¿Qué debes probar siempre?</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-3">Configuración de la máquina:</h4>
+            <ul class="text-gray-700 space-y-2">
+              <li>• Tensión del hilo superior e inferior</li>
+              <li>• Longitud de puntada</li>
+              <li>• Ancho de zigzag (si lo usas)</li>
+              <li>• Velocidad de costura</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-3">Comportamiento de la tela:</h4>
+            <ul class="text-gray-700 space-y-2">
+              <li>• ¿Se deshilacha mucho?</li>
+              <li>• ¿Se estira al coser?</li>
+              <li>• ¿Se arruga fácilmente?</li>
+              <li>• ¿Cómo reacciona al planchado?</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-teal-50 border border-teal-200 rounded-lg p-6 mb-8">
+          <h4 class="font-semibold text-teal-900 mb-2">📏 Crea tu muestra perfecta</h4>
+          <p class="text-teal-800 mb-3">
+            Corta un trozo de 15x15 cm de tu tela. Haz diferentes tipos de costuras: recta, zigzag, dobladillo. Esta muestra te dirá todo lo que necesitas saber.
+          </p>
+          <p class="text-teal-800 text-sm">
+            <strong>Tip profesional:</strong> Guarda las muestras etiquetadas para futuros proyectos con la misma tela.
+          </p>
+        </div>
+      </section>
+
+      <!-- Consejos generales -->
+      <section id="consejos-generales" class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Consejos generales para evitar errores</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-yellow-900 mb-4">🕰️ Gestión del tiempo</h3>
+            <ul class="text-yellow-800 space-y-2">
+              <li>• No tengas prisa, la costura requiere paciencia</li>
+              <li>• Es mejor hacer poco bien que mucho mal</li>
+              <li>• Descansa cada hora para mantener la concentración</li>
+              <li>• Si estás frustrada, para y retoma al día siguiente</li>
+            </ul>
+          </div>
+          
+          <div class="bg-pink-50 border border-pink-200 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-pink-900 mb-4">🎯 Organización</h3>
+            <ul class="text-pink-800 space-y-2">
+              <li>• Mantén tu área de trabajo limpia y ordenada</li>
+              <li>• Usa cajitas para organizar botones y alfileres</li>
+              <li>• Etiqueta tus hilos por colores</li>
+              <li>• Ten siempre un descosedor a mano</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-gray-100 rounded-lg p-6 mb-8">
+          <h3 class="text-lg font-semibold text-gray-900 mb-4">📚 Recursos de aprendizaje continuo</h3>
+          <p class="text-gray-700 mb-4">
+            En Puntadas y Punto creemos firmemente en el aprendizaje continuo. Estos son algunos recursos que recomendamos a nuestras alumnas:
+          </p>
+          <ul class="text-gray-700 space-y-2">
+            <li>• <strong>Clases presenciales:</strong> Nada sustituye la guía personalizada de un profesional</li>
+            <li>• <strong>Libros de técnicas:</strong> Invierte en buenos manuales de costura</li>
+            <li>• <strong>Comunidades online:</strong> Únete a grupos de costura para compartir experiencias</li>
+            <li>• <strong>Práctica regular:</strong> Dedica al menos 30 minutos semanales a practicar</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">Preguntas frecuentes</h2>
+        
+        <div class="space-y-6">
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">
+              ¿Cuánto tiempo debo practicar antes de hacer mi primera prenda?
+            </h3>
+            <p class="text-gray-700">
+              Recomendamos al menos 10-15 horas de práctica con ejercicios básicos antes de intentar una prenda completa. En nuestras clases de nivel básico cubrimos exactamente estas técnicas fundamentales.
+            </p>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">
+              ¿Es normal que mi primera prenda no quede perfecta?
+            </h3>
+            <p class="text-gray-700">
+              ¡Completamente normal! La costura es una habilidad que se desarrolla con la práctica. Lo importante es que cada proyecto sea mejor que el anterior. En nuestro taller decimos que la décima prenda será significativamente mejor que la primera.
+            </p>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">
+              ¿Qué hago si cometo un error después de haber cosido?
+            </h3>
+            <p class="text-gray-700">
+              No te desesperes. La mayoría de errores tienen solución. Usa un descosedor con cuidado, vuelve al punto anterior y rehaz la costura. Si el error es de medidas, a veces se puede aprovechar la tela para hacer otra prenda más pequeña.
+            </p>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">
+              ¿Necesito una máquina de coser cara para empezar?
+            </h3>
+            <p class="text-gray-700">
+              No necesariamente. Una máquina básica pero de calidad es suficiente para empezar. Es más importante aprender las técnicas correctas que tener el equipo más caro. En nuestras clases puedes probar diferentes máquinas antes de decidir qué comprar.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conclusión -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Conclusión</h2>
+        
+        <p class="text-lg mb-6">
+          Los errores en costura son inevitables, especialmente al principio, pero conocer los más comunes y saber cómo evitarlos te ahorrará mucho tiempo y frustración. Recuerda que cada maestra de costura ha pasado por el mismo proceso de aprendizaje.
+        </p>
+
+        <p class="mb-8">
+          En Puntadas y Punto llevamos más de 20 años ayudando a personas como tú a evitar estos errores desde el primer día. Nuestro método de enseñanza se basa en la prevención: es mejor aprender la técnica correcta desde el principio que tener que corregir malos hábitos después.
+        </p>
+
+        <div class="bg-burgundy-50 border border-burgundy-200 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-burgundy-900 mb-3">¿Quieres aprender las técnicas correctas desde el primer día?</h3>
+          <p class="text-burgundy-800 mb-4">
+            En nuestras clases de costura en Córdoba te enseñamos no solo cómo coser, sino cómo evitar los errores más comunes. Con grupos reducidos y atención personalizada, garantizamos que aprendas las técnicas correctas desde el principio.
+          </p>
+          <a href="/servicios/clases-de-costura/" class="inline-flex items-center text-burgundy-700 hover:text-burgundy-800 font-medium">
+            Más información sobre nuestras clases
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </section>
+    </div>
+  </article>
+
+  <!-- Navegación entre artículos -->
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <a href="/blog/" class="text-burgundy-700 hover:text-burgundy-800 font-medium">
+          ← Volver al blog
+        </a>
+        <div class="flex space-x-4">
+          <a href="/blog/moda-flamenca-tradicion-tendencias-actuales/" class="text-burgundy-700 hover:text-burgundy-800 font-medium">
+            Siguiente artículo →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-burgundy-700 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+        ¿Te ha resultado útil este artículo?
+      </h2>
+      <p class="text-xl mb-8 opacity-90">
+        Ven a poner en práctica estos consejos en nuestro taller. 
+        Te ayudamos a evitar estos errores desde tu primera clase.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/servicios/clases-de-costura/" class="bg-white text-burgundy-700 hover:bg-gray-100 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Ver nuestras clases
+        </a>
+        <a href="/contacto/" class="border-2 border-white text-white hover:bg-white hover:text-burgundy-700 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Contactar
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo debo practicar antes de hacer mi primera prenda?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Recomendamos al menos 10-15 horas de práctica con ejercicios básicos antes de intentar una prenda completa. En nuestras clases de nivel básico cubrimos exactamente estas técnicas fundamentales."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es normal que mi primera prenda no quede perfecta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "¡Completamente normal! La costura es una habilidad que se desarrolla con la práctica. Lo importante es que cada proyecto sea mejor que el anterior."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué hago si cometo un error después de haber cosido?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No te desesperes. La mayoría de errores tienen solución. Usa un descosedor con cuidado, vuelve al punto anterior y rehaz la costura."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito una máquina de coser cara para empezar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No necesariamente. Una máquina básica pero de calidad es suficiente para empezar. Es más importante aprender las técnicas correctas que tener el equipo más caro."
+      }
+    }
+  ]
+}
+</script>

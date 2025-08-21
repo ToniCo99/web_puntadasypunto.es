@@ -1,0 +1,481 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const title = 'Trajes de Flamenca a Medida en Córdoba - Puntadas y Punto';
+const description = 'Confección artesanal de trajes de flamenca en Córdoba. Diseños únicos, tradición y elegancia. Más de 20 años creando trajes flamencos de alta calidad con atención personalizada.';
+
+const breadcrumbs = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Servicios', href: '/servicios/' },
+  { label: 'Trajes de flamenca' }
+];
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Confección de trajes de flamenca a medida",
+  "description": "Diseño y confección artesanal de trajes de flamenca tradicionales y modernos",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Puntadas y Punto",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Glorieta de los Países Bálticos 1, Oficina 11",
+      "addressLocality": "Córdoba",
+      "postalCode": "14014",
+      "addressCountry": "ES"
+    }
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Córdoba",
+    "addressCountry": "ES"
+  },
+  "serviceType": "Confección de trajes de flamenca",
+  "offers": {
+    "@type": "Offer",
+    "description": "Trajes de flamenca a medida desde 350€"
+  }
+};
+---
+
+<Layout title={title} description={description} schema={serviceSchema}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="py-16 bg-gradient-to-br from-cream-100 to-cream-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <span class="text-burgundy-700">Trajes de Flamenca</span> a Medida en Córdoba
+          </h1>
+          <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+            Creamos trajes de flamenca únicos que combinan la tradición andaluza con tu estilo personal. 
+            Cada traje es una obra de arte confeccionada completamente a mano en nuestro taller.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#proceso" class="btn btn-primary">
+              Ver proceso
+            </a>
+            <a href="/contacto/" class="btn btn-secondary">
+              Solicitar presupuesto
+            </a>
+          </div>
+        </div>
+        <div>
+          <img
+            src="/images/vestido-flamenca-beige-elegante-cordoba.jpg"
+            alt="Traje de flamenca elegante confeccionado en Puntadas y Punto, Córdoba"
+            class="rounded-lg shadow-xl w-full h-auto object-cover"
+            loading="eager"
+            width="600"
+            height="400"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería de trajes -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Nuestros Trajes de Flamenca
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Cada traje es único y refleja la personalidad de quien lo lleva. 
+          Descubre algunos de nuestros trabajos más destacados.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <!-- Traje 1 -->
+        <div class="group cursor-pointer">
+          <div class="aspect-w-3 aspect-h-4 overflow-hidden rounded-lg mb-4">
+            <img
+              src="/images/vestido-flamenca-beige-volantes-hecho-a-medida.jpg"
+              alt="Traje de flamenca beige con volantes hecho a medida"
+              class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              width="400"
+              height="500"
+            />
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Flamenca Clásica Beige</h3>
+          <p class="text-gray-600 text-sm">
+            Diseño tradicional con volantes perfectos y acabados de alta costura. 
+            Ideal para feria y eventos especiales.
+          </p>
+        </div>
+
+        <!-- Traje 2 -->
+        <div class="group cursor-pointer">
+          <div class="aspect-w-3 aspect-h-4 overflow-hidden rounded-lg mb-4">
+            <img
+              src="/images/vestido-flamenca-estampado-flores-colores-vivos.jpg"
+              alt="Traje de flamenca con estampado floral en colores vivos"
+              class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              width="400"
+              height="500"
+            />
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Flamenca Estampado Floral</h3>
+          <p class="text-gray-600 text-sm">
+            Diseño alegre y moderno con estampado de flores en colores vibrantes. 
+            Perfecto para destacar en cualquier evento.
+          </p>
+        </div>
+
+        <!-- Traje 3 -->
+        <div class="group cursor-pointer">
+          <div class="aspect-w-3 aspect-h-4 overflow-hidden rounded-lg mb-4">
+            <img
+              src="/images/vestido-flamenca-infantil-lunares-rosas.jpg"
+              alt="Traje de flamenca infantil con lunares rosas"
+              class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              width="400"
+              height="500"
+            />
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Flamenca Infantil</h3>
+          <p class="text-gray-600 text-sm">
+            Diseños especiales para las más pequeñas. Comodidad y belleza 
+            adaptadas a los movimientos de las niñas.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="/galeria/" class="btn btn-secondary">
+          Ver toda nuestra galería
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso de confección -->
+  <section id="proceso" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Proceso Artesanal de Confección
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Desde la primera consulta hasta la entrega final, cada paso está cuidadosamente 
+          planificado para crear el traje perfecto para ti.
+        </p>
+      </div>
+
+      <div class="space-y-12">
+        <!-- Paso 1 -->
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-1/2">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-burgundy-700 text-white rounded-full flex items-center justify-center text-xl font-bold mr-4">1</div>
+              <h3 class="text-2xl font-bold text-gray-900">Consulta y Diseño</h3>
+            </div>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              Nos reunimos contigo para entender tu visión, estilo y ocasión de uso. 
+              Analizamos tu morfología y gustos para crear un diseño único que te favorezca al máximo.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Asesoramiento sobre colores y estilos
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Selección de tejidos y complementos
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Bocetos preliminares del diseño
+              </li>
+            </ul>
+          </div>
+          <div class="lg:w-1/2">
+            <img
+              src="/images/taller-costura-ajuste-falda-cordoba.jpg"
+              alt="Proceso de diseño y consulta para trajes de flamenca"
+              class="rounded-lg shadow-lg w-full h-auto object-cover"
+              loading="lazy"
+              width="500"
+              height="300"
+            />
+          </div>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+          <div class="lg:w-1/2">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-burgundy-700 text-white rounded-full flex items-center justify-center text-xl font-bold mr-4">2</div>
+              <h3 class="text-2xl font-bold text-gray-900">Toma de Medidas</h3>
+            </div>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              Realizamos una toma de medidas exhaustiva y profesional. Cada cuerpo es único 
+              y nuestro patrón debe reflejar perfectamente tus proporciones.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Más de 20 medidas específicas
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Análisis de postura y proporciones
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Registro fotográfico de referencia
+              </li>
+            </ul>
+          </div>
+          <div class="lg:w-1/2">
+            <div class="bg-burgundy-50 border border-burgundy-200 rounded-lg p-6">
+              <h4 class="font-semibold text-burgundy-900 mb-3">💡 ¿Sabías que...?</h4>
+              <p class="text-burgundy-800 text-sm">
+                Un traje de flamenca bien ajustado puede requerir hasta 25 medidas diferentes. 
+                Desde el contorno del cuello hasta la caída exacta de cada volante, 
+                cada detalle influye en el resultado final.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-1/2">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-burgundy-700 text-white rounded-full flex items-center justify-center text-xl font-bold mr-4">3</div>
+              <h3 class="text-2xl font-bold text-gray-900">Confección Artesanal</h3>
+            </div>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              Comenzamos la confección artesanal de tu traje. Cada costura, cada volante, 
+              cada detalle se realiza a mano con la máxima precisión y cuidado.
+            </p>
+            <div class="grid grid-cols-2 gap-4 text-center">
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="text-2xl font-bold text-burgundy-700 mb-1">40-60h</div>
+                <div class="text-sm text-gray-600">Horas de trabajo</div>
+              </div>
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="text-2xl font-bold text-burgundy-700 mb-1">4-6</div>
+                <div class="text-sm text-gray-600">Semanas de confección</div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/2">
+            <img
+              src="/images/exposicion-vestidos-fiesta-alta-costura-cordoba.jpg"
+              alt="Proceso de confección artesanal de trajes de flamenca"
+              class="rounded-lg shadow-lg w-full h-auto object-cover"
+              loading="lazy"
+              width="500"
+              height="300"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Precios y opciones -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Opciones y Precios
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Ofrecemos diferentes opciones para adaptarnos a tu presupuesto y necesidades. 
+          Todos nuestros trajes incluyen la misma calidad artesanal.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Opción Básica -->
+        <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Traje Clásico</h3>
+          <div class="text-3xl font-bold text-burgundy-700 mb-6">Desde 350€</div>
+          
+          <ul class="space-y-3 text-gray-600 mb-8">
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Diseño tradicional
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              3-4 volantes
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Tejidos de calidad
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Acabados profesionales
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Garantía de satisfacción
+            </li>
+          </ul>
+          
+          <a href="/contacto/" class="btn btn-secondary w-full">
+            Consultar disponibilidad
+          </a>
+        </div>
+
+        <!-- Opción Premium -->
+        <div class="bg-burgundy-50 border-2 border-burgundy-300 rounded-lg p-8 shadow-lg relative">
+          <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <span class="bg-burgundy-700 text-white px-4 py-1 rounded-full text-sm font-medium">
+              Más popular
+            </span>
+          </div>
+          
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Traje Premium</h3>
+          <div class="text-3xl font-bold text-burgundy-700 mb-6">Desde 550€</div>
+          
+          <ul class="space-y-3 text-gray-600 mb-8">
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Todo lo del traje clásico
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              5-6 volantes
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Tejidos premium
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Detalles personalizados
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Forro de calidad superior
+            </li>
+          </ul>
+          
+          <a href="/contacto/" class="btn btn-primary w-full">
+            Solicitar presupuesto
+          </a>
+        </div>
+
+        <!-- Opción Lujo -->
+        <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Alta Costura</h3>
+          <div class="text-3xl font-bold text-burgundy-700 mb-6">Desde 850€</div>
+          
+          <ul class="space-y-3 text-gray-600 mb-8">
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Diseño exclusivo
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              6-7 volantes
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Tejidos de lujo
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Bordados y apliques
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Acabados de alta costura
+            </li>
+          </ul>
+          
+          <a href="/contacto/" class="btn btn-secondary w-full">
+            Consulta personalizada
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <p class="text-gray-600 mb-4">
+          * Los precios pueden variar según el diseño, tejidos y detalles específicos
+        </p>
+        <p class="text-sm text-gray-500">
+          Financiación disponible en varios pagos sin intereses
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-burgundy-700 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+        ¿Lista para tu Traje de Flamenca Perfecto?
+      </h2>
+      <p class="text-xl mb-8 opacity-90">
+        Cada traje que creamos es único, como la mujer que lo llevará. 
+        Convierte tu sueño flamenco en realidad con nuestro equipo de artesanas expertas.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contacto/" class="bg-white text-burgundy-700 hover:bg-gray-100 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Solicitar cita
+        </a>
+        <a href="tel:+34699869097" class="border-2 border-white text-white hover:bg-white hover:text-burgundy-700 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Llamar ahora
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

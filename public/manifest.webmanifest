@@ -1,0 +1,46 @@
+{
+  "name": "Puntadas y Punto - Escuela de Costura en Córdoba",
+  "short_name": "Puntadas y Punto",
+  "description": "Taller artesanal de costura y patronaje en Córdoba. Clases de costura, confección a medida y trajes de flamenca.",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "background_color": "#fdf8ed",
+  "theme_color": "#8B1538",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-16x16.png", 
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["education", "business", "lifestyle"],
+  "shortcuts": [
+    {
+      "name": "Clases de costura",
+      "short_name": "Clases",
+      "description": "Información sobre nuestras clases de costura",
+      "url": "/servicios/clases-de-costura/",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
+    },
+    {
+      "name": "Contacto",
+      "short_name": "Contacto",
+      "description": "Contacta con nosotros",
+      "url": "/contacto/",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
+    }
+  ]
+}

@@ -1,0 +1,796 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const title = 'Moda flamenca hecha a mano: tradición y tendencias actuales - Puntadas y Punto';
+const description = 'Descubre cómo crear trajes de flamenca que respeten la tradición mientras incorporan las tendencias modernas. Guía completa sobre confección artesanal de trajes flamencos en Córdoba.';
+
+const breadcrumbs = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Blog', href: '/blog/' },
+  { label: 'Moda flamenca tradición y tendencias' }
+];
+
+const publishDate = '2024-08-15';
+const readTime = '10 min';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Moda flamenca hecha a mano: tradición y tendencias actuales",
+  "description": description,
+  "author": {
+    "@type": "LocalBusiness",
+    "name": "Puntadas y Punto"
+  },
+  "publisher": {
+    "@type": "LocalBusiness",
+    "name": "Puntadas y Punto",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://puntadasypunto.es/images/logo-puntadas-y-punto.png"
+    }
+  },
+  "datePublished": publishDate,
+  "dateModified": publishDate,
+  "image": "https://puntadasypunto.es/images/vestido-flamenca-beige-elegante-cordoba.jpg",
+  "url": "https://puntadasypunto.es/blog/moda-flamenca-tradicion-tendencias-actuales/"
+};
+---
+
+<Layout title={title} description={description} schema={articleSchema}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero del artículo -->
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Encabezado -->
+    <header class="mb-12">
+      <div class="flex items-center space-x-2 text-sm text-gray-500 mb-4">
+        <span class="bg-burgundy-100 text-burgundy-800 px-3 py-1 rounded-full font-medium">Tradición</span>
+        <span>•</span>
+        <time datetime={publishDate}>15 de agosto de 2024</time>
+        <span>•</span>
+        <span>{readTime} de lectura</span>
+      </div>
+      
+      <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+        Moda flamenca hecha a mano: tradición y tendencias actuales
+      </h1>
+      
+      <p class="text-xl text-gray-600 leading-relaxed mb-8">
+        El traje de flamenca es mucho más que una prenda: es un símbolo de identidad, tradición y arte. En nuestro taller de Córdoba, llevamos décadas creando trajes que honran el pasado mientras abrazan las tendencias contemporáneas.
+      </p>
+      
+      <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mb-8">
+        <img
+          src="/images/vestido-flamenca-beige-elegante-cordoba.jpg"
+          alt="Traje de flamenca elegante confeccionado artesanalmente en Puntadas y Punto, Córdoba"
+          class="w-full h-96 object-cover"
+          loading="eager"
+          width="800"
+          height="400"
+        />
+      </div>
+    </header>
+
+    <!-- Índice -->
+    <div class="bg-cream-100 rounded-lg p-6 mb-12 border border-cream-200">
+      <h2 class="text-lg font-semibold text-gray-900 mb-4">Índice del artículo</h2>
+      <ol class="space-y-2 text-gray-700">
+        <li><a href="#historia" class="hover:text-burgundy-700 transition-colors">1. Historia y evolución del traje de flamenca</a></li>
+        <li><a href="#elementos-tradicionales" class="hover:text-burgundy-700 transition-colors">2. Elementos tradicionales imprescindibles</a></li>
+        <li><a href="#tendencias-actuales" class="hover:text-burgundy-700 transition-colors">3. Tendencias actuales en moda flamenca</a></li>
+        <li><a href="#proceso-artesanal" class="hover:text-burgundy-700 transition-colors">4. El proceso artesanal paso a paso</a></li>
+        <li><a href="#materiales-tejidos" class="hover:text-burgundy-700 transition-colors">5. Materiales y tejidos: de lo clásico a lo innovador</a></li>
+        <li><a href="#consejos-eleccion" class="hover:text-burgundy-700 transition-colors">6. Consejos para elegir tu traje perfecto</a></li>
+        <li><a href="#cuidado-mantenimiento" class="hover:text-burgundy-700 transition-colors">7. Cuidado y mantenimiento</a></li>
+        <li><a href="#faq" class="hover:text-burgundy-700 transition-colors">Preguntas frecuentes</a></li>
+      </ol>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="prose prose-lg max-w-none">
+      
+      <!-- Introducción -->
+      <p class="text-lg leading-relaxed mb-8">
+        Cada abril, cuando llega la Feria de Abril, y durante las ferias de toda Andalucía, las calles se llenan de color y elegancia con los trajes de flamenca. Pero detrás de cada uno de estos trajes hay <strong>horas de trabajo artesanal, tradición familiar y un profundo respeto por nuestra cultura</strong>.
+      </p>
+
+      <p class="mb-8">
+        En Puntadas y Punto hemos tenido el privilegio de crear cientos de trajes de flamenca a lo largo de más de 20 años. Cada uno cuenta una historia única, pero todos comparten la misma pasión por preservar una tradición que se remonta al siglo XIX, adaptándola a los gustos y necesidades del siglo XXI.
+      </p>
+
+      <!-- Historia -->
+      <section id="historia" class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Historia y evolución del traje de flamenca</h2>
+        
+        <p class="mb-6">
+          El traje de flamenca tal como lo conocemos hoy tiene sus raíces en el siglo XIX, cuando las mujeres de las clases populares andaluzas comenzaron a vestir de una manera particular para las romerías y ferias. Lo que comenzó como ropa de trabajo de las gitanas y campesinas se transformó gradualmente en el icónico vestido que conocemos hoy.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">Evolución por décadas:</h3>
+        
+        <div class="space-y-6 mb-8">
+          <div class="bg-amber-50 border-l-4 border-amber-400 p-6">
+            <h4 class="font-semibold text-amber-900 mb-2">1920-1940: Los inicios</h4>
+            <p class="text-amber-800">
+              Trajes de líneas sencillas, colores sobrios (principalmente negro, marrón y azul marino), con pocos volantes y siluetas más rectas. El objetivo era la funcionalidad más que el espectáculo.
+            </p>
+          </div>
+          
+          <div class="bg-rose-50 border-l-4 border-rose-400 p-6">
+            <h4 class="font-semibold text-rose-900 mb-2">1950-1970: La transformación</h4>
+            <p class="text-rose-800">
+              Aparecen los primeros volantes múltiples, se incorporan colores más vivos y comienzan a usarse estampados florales. La cintura se marca más y aparecen los primeros escotes en V.
+            </p>
+          </div>
+          
+          <div class="bg-purple-50 border-l-4 border-purple-400 p-6">
+            <h4 class="font-semibold text-purple-900 mb-2">1980-2000: La sofisticación</h4>
+            <p class="text-purple-800">
+              Los diseñadores profesionales entran en escena. Se experimenta con tejidos nobles, bordados elaborados y se establecen las "reglas" estéticas que conocemos hoy. Aparecen las primeras casas de moda flamenca.
+            </p>
+          </div>
+          
+          <div class="bg-teal-50 border-l-4 border-teal-400 p-6">
+            <h4 class="font-semibold text-teal-900 mb-2">2000-actualidad: La innovación</h4>
+            <p class="text-teal-800">
+              Fusión entre tradición e innovación. Nuevos tejidos técnicos, cortes revolucionarios que respetan la esencia, y una búsqueda constante del equilibrio entre comodidad y espectacularidad.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Elementos tradicionales -->
+      <section id="elementos-tradicionales" class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Elementos tradicionales imprescindibles</h2>
+        
+        <p class="mb-6">
+          Un auténtico traje de flamenca debe respetar ciertos elementos que lo identifican como tal. Estos componentes han permanecido constantes a lo largo de los años y son los que dan identidad al traje.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">La estructura básica</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start space-x-2">
+                <span class="text-burgundy-700 font-bold">•</span>
+                <div>
+                  <strong>Cuerpo entallado:</strong> Marca la cintura y realza la figura femenina. Debe ajustar perfectamente sin apretar.
+                </div>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-burgundy-700 font-bold">•</span>
+                <div>
+                  <strong>Falda con vuelo:</strong> Permite el movimiento elegante. Tradicionalmente llega hasta los tobillos.
+                </div>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-burgundy-700 font-bold">•</span>
+                <div>
+                  <strong>Mangas:</strong> Pueden ser largas, tres cuartos o de farol. Siempre ajustadas en la sisa.
+                </div>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-burgundy-700 font-bold">•</span>
+                <div>
+                  <strong>Escote:</strong> Tradicionalmente alto, aunque se permiten variaciones moderadas.
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Los volantes</h3>
+            <p class="mb-4">
+              Son el alma del traje de flamenca. Su número, distribución y forma determinan el estilo del vestido:
+            </p>
+            <ul class="space-y-2">
+              <li><strong>Volantes horizontales:</strong> Los más tradicionales</li>
+              <li><strong>Volantes en capa:</strong> Crean más volumen</li>
+              <li><strong>Volantes asimétricos:</strong> Tendencia moderna</li>
+              <li><strong>Número ideal:</strong> Entre 3 y 7 volantes</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+          <h3 class="text-lg font-semibold text-blue-900 mb-3">💡 El secreto de los volantes perfectos</h3>
+          <p class="text-blue-800 mb-3">
+            En nuestro taller aplicamos una fórmula matemática precisa para calcular el ancho de cada volante. El inferior debe tener el doble de ancho que la falda base, y cada volante superior debe ser un 75% del inferior.
+          </p>
+          <p class="text-blue-800 text-sm">
+            <strong>Ejemplo:</strong> Si la falda base mide 3 metros en el bajo, el primer volante medirá 6 metros, el segundo 4.5 metros, y así sucesivamente.
+          </p>
+        </div>
+      </section>
+
+      <!-- Tendencias actuales -->
+      <section id="tendencias-actuales" class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Tendencias actuales en moda flamenca</h2>
+        
+        <p class="mb-6">
+          La moda flamenca de 2024 se caracteriza por la búsqueda del equilibrio perfecto entre respeto a la tradición e innovación. Las nuevas generaciones buscan trajes que les permitan expresar su personalidad sin renunciar a la esencia flamenca.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">Tendencias dominantes este año:</h3>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          <div class="space-y-6">
+            <div class="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h4 class="font-semibold text-green-900 mb-2">🌿 Colores naturales</h4>
+              <p class="text-green-800 text-sm mb-3">
+                Los tonos tierra, beiges, tostados y verdes oliva dominan las pasarelas. Se busca la conexión con la naturaleza.
+              </p>
+              <div class="flex space-x-2">
+                <div class="w-6 h-6 bg-yellow-100 border border-yellow-300 rounded"></div>
+                <div class="w-6 h-6 bg-amber-200 border border-amber-400 rounded"></div>
+                <div class="w-6 h-6 bg-green-200 border border-green-400 rounded"></div>
+                <div class="w-6 h-6 bg-stone-300 border border-stone-500 rounded"></div>
+              </div>
+            </div>
+            
+            <div class="bg-pink-50 border border-pink-200 rounded-lg p-6">
+              <h4 class="font-semibold text-pink-900 mb-2">🌸 Estampados renovados</h4>
+              <p class="text-pink-800 text-sm">
+                Los lunares siguen siendo protagonistas, pero aparecen en nuevos tamaños y combinaciones. Los florales se modernizan con grafismos geométricos.
+              </p>
+            </div>
+          </div>
+          
+          <div class="space-y-6">
+            <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-6">
+              <h4 class="font-semibold text-indigo-900 mb-2">✨ Detalles minimalistas</h4>
+              <p class="text-indigo-800 text-sm">
+                Menos es más. Se prefieren acabados limpios, costuras perfectas y detalles sutiles pero impactantes. La calidad prima sobre la cantidad.
+              </p>
+            </div>
+            
+            <div class="bg-orange-50 border border-orange-200 rounded-lg p-6">
+              <h4 class="font-semibold text-orange-900 mb-2">👗 Siluetas renovadas</h4>
+              <p class="text-orange-800 text-sm">
+                Aparecen cortes más entallados en la cintura, mangas con nuevas formas y escotes que juegan con las transparencias de forma elegante.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-100 rounded-lg p-6 mb-8">
+          <h3 class="text-lg font-semibold text-gray-900 mb-4">📊 Lo que más se pide en nuestro taller</h3>
+          <p class="text-gray-700 mb-4">
+            Basándonos en los pedidos de la temporada 2024, estas son las características más solicitadas:
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-burgundy-700">65%</div>
+              <div class="text-sm text-gray-600">Colores tierra</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-burgundy-700">78%</div>
+              <div class="text-sm text-gray-600">Lunares medianos</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-burgundy-700">52%</div>
+              <div class="text-sm text-gray-600">Mangas 3/4</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-burgundy-700">43%</div>
+              <div class="text-sm text-gray-600">5 volantes</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Proceso artesanal -->
+      <section id="proceso-artesanal" class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">El proceso artesanal paso a paso</h2>
+        
+        <p class="mb-6">
+          Crear un traje de flamenca a mano es un proceso que requiere entre 40 y 80 horas de trabajo, dependiendo de la complejidad del diseño. En nuestro taller seguimos un proceso meticuloso que garantiza tanto la calidad como la comodidad.
+        </p>
+
+        <div class="space-y-8 mb-8">
+          <div class="flex items-start space-x-4">
+            <div class="w-8 h-8 bg-burgundy-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">1</div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Consulta y diseño personalizado</h3>
+              <p class="text-gray-700 mb-3">
+                Nos reunimos contigo para entender tus gustos, estilo de vida y ocasiones de uso. Analizamos tu morfología para crear un diseño que te favorezca al máximo.
+              </p>
+              <div class="bg-yellow-50 border border-yellow-200 rounded p-3 text-sm">
+                <strong>Duración:</strong> 1-2 horas | <strong>Incluye:</strong> Bocetos iniciales y selección de tejidos
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="w-8 h-8 bg-burgundy-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">2</div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Toma de medidas profesional</h3>
+              <p class="text-gray-700 mb-3">
+                Tomamos más de 20 medidas diferentes, incluyendo detalles como la caída del hombro, el largo del talle y la postura natural. Cada cuerpo es único y el patrón debe reflejarlo.
+              </p>
+              <div class="bg-yellow-50 border border-yellow-200 rounded p-3 text-sm">
+                <strong>Duración:</strong> 45 minutos | <strong>Incluye:</strong> Fotografías de referencia y anotaciones posturales
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="w-8 h-8 bg-burgundy-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">3</div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Creación del patrón individual</h3>
+              <p class="text-gray-700 mb-3">
+                Desarrollamos un patrón único para ti. No usamos tallas estándar; cada patrón se crea desde cero basándose en tus medidas exactas y las características del diseño elegido.
+              </p>
+              <div class="bg-yellow-50 border border-yellow-200 rounded p-3 text-sm">
+                <strong>Duración:</strong> 3-4 horas | <strong>Incluye:</strong> Patrón en papel y marcación de modificaciones
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="w-8 h-8 bg-burgundy-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">4</div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Corte y preparación</h3>
+              <p class="text-gray-700 mb-3">
+                Cortamos todas las piezas con precisión milimétrica. La dirección del hilo, el aplomo y la caída de cada pieza se estudian individualmente. Los volantes se cortan al bies para conseguir la caída perfecta.
+              </p>
+              <div class="bg-yellow-50 border border-yellow-200 rounded p-3 text-sm">
+                <strong>Duración:</strong> 4-6 horas | <strong>Incluye:</strong> Marcación de todas las costuras y pinzas
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="w-8 h-8 bg-burgundy-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">5</div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Primera prueba</h3>
+              <p class="text-gray-700 mb-3">
+                Montamos el cuerpo del vestido hilvanado para la primera prueba. Aquí ajustamos cualquier detalle necesario y verificamos que el ajuste sea perfecto antes de continuar.
+              </p>
+              <div class="bg-yellow-50 border border-yellow-200 rounded p-3 text-sm">
+                <strong>Duración:</strong> 30-45 minutos | <strong>Incluye:</strong> Marcación de ajustes necesarios
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="w-8 h-8 bg-burgundy-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">6</div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Confección definitiva</h3>
+              <p class="text-gray-700 mb-3">
+                Procedemos a la costura definitiva del cuerpo, montaje de mangas, cremallera invisible y todos los detalles estructurales. Cada costura se plancha y revisa individualmente.
+              </p>
+              <div class="bg-yellow-50 border border-yellow-200 rounded p-3 text-sm">
+                <strong>Duración:</strong> 15-20 horas | <strong>Incluye:</strong> Forros, entretelas y refuerzos
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="w-8 h-8 bg-burgundy-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">7</div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Confección de volantes</h3>
+              <p class="text-gray-700 mb-3">
+                Los volantes son el elemento más técnico. Cada uno se corta, se dobladilla a mano o con técnica francesa, se frunce con precisión matemática y se monta respetando la caída natural.
+              </p>
+              <div class="bg-yellow-50 border border-yellow-200 rounded p-3 text-sm">
+                <strong>Duración:</strong> 12-25 horas | <strong>Incluye:</strong> Dobladillo invisible y fruncido perfecto
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="w-8 h-8 bg-burgundy-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">8</div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Prueba final y ajustes</h3>
+              <p class="text-gray-700 mb-3">
+                Con el traje completamente terminado, realizamos la prueba final. Verificamos la comodidad, el movimiento, la caída de los volantes y realizamos los últimos ajustes si son necesarios.
+              </p>
+              <div class="bg-yellow-50 border border-yellow-200 rounded p-3 text-sm">
+                <strong>Duración:</strong> 30 minutos | <strong>Incluye:</strong> Instrucciones de cuidado personalizadas
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-emerald-900 mb-3">🎨 El arte está en los detalles</h3>
+          <p class="text-emerald-800 mb-3">
+            Cada traje que sale de nuestro taller incluye detalles que marcan la diferencia: costuras francesas en todas las uniones importantes, dobladillos realizados completamente a mano, forros de calidad que permiten el movimiento, y ese "no sé qué" que solo da la experiencia de décadas.
+          </p>
+          <p class="text-emerald-800 text-sm">
+            <strong>Lo que nos diferencia:</strong> No solo hacemos trajes, creamos piezas únicas que durarán toda la vida.
+          </p>
+        </div>
+      </section>
+
+      <!-- Materiales y tejidos -->
+      <section id="materiales-tejidos" class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Materiales y tejidos: de lo clásico a lo innovador</h2>
+        
+        <p class="mb-6">
+          La elección del tejido es crucial para el éxito de un traje de flamenca. Debe combinar belleza, comodidad, durabilidad y comportamiento adecuado para el movimiento del baile y las largas jornadas de feria.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">Tejidos tradicionales</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <h4 class="font-semibold text-gray-900 mb-3">🌿 Algodón</h4>
+            <p class="text-gray-700 text-sm mb-3">
+              El tejido clásico por excelencia. Transpirable, cómodo y con buena caída. Ideal para principiantes y uso diario en feria.
+            </p>
+            <div class="text-xs text-gray-600">
+              <strong>Ventajas:</strong> Económico, fácil cuidado<br>
+              <strong>Inconvenientes:</strong> Se arruga, colores menos vivos
+            </div>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <h4 class="font-semibold text-gray-900 mb-3">✨ Crepé</h4>
+            <p class="text-gray-700 text-sm mb-3">
+              Tejido elegante con textura ligeramente rugosa. Disimula pequeñas imperfecciones y tiene una caída muy favorable.
+            </p>
+            <div class="text-xs text-gray-600">
+              <strong>Ventajas:</strong> Elegante, arruga poco<br>
+              <strong>Inconvenientes:</strong> Más caro, requiere más cuidado
+            </div>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <h4 class="font-semibold text-gray-900 mb-3">🌊 Georgette</h4>
+            <p class="text-gray-700 text-sm mb-3">
+              Tejido fluido y ligero, perfecto para volantes. Crea movimiento natural y es muy cómodo para bailar.
+            </p>
+            <div class="text-xs text-gray-600">
+              <strong>Ventajas:</strong> Movimiento natural, colores intensos<br>
+              <strong>inconvenientes:</strong> Delicado, puede engancharse
+            </div>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <h4 class="font-semibold text-gray-900 mb-3">💎 Satén</h4>
+            <p class="text-gray-700 text-sm mb-3">
+              Para ocasiones especiales. Brillo natural que aporta elegancia, aunque requiere mayor cuidado en el uso.
+            </p>
+            <div class="text-xs text-gray-600">
+              <strong>Ventajas:</strong> Muy elegante, colores brillantes<br>
+              <strong>Inconvenientes:</strong> Se marca, requiere cuidado especial
+            </div>
+          </div>
+        </div>
+
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">Innovaciones en tejidos</h3>
+        
+        <p class="mb-6">
+          La industria textil ha desarrollado nuevos materiales que combinan las ventajas de los tejidos tradicionales con mejoras técnicas que los hacen más prácticos para el uso moderno.
+        </p>
+
+        <div class="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg p-6 mb-8">
+          <h4 class="font-semibold text-gray-900 mb-4">🔬 Tejidos técnicos modernos</h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h5 class="font-medium text-gray-900 mb-2">Mezclas con elastano (2-5%)</h5>
+              <p class="text-gray-700 text-sm">
+                Aportan comodidad y libertad de movimiento sin alterar la apariencia tradicional. Especialmente útiles en cuerpos muy entallados.
+              </p>
+            </div>
+            <div>
+              <h5 class="font-medium text-gray-900 mb-2">Tratamientos antiarrugas</h5>
+              <p class="text-gray-700 text-sm">
+                Tejidos que mantienen su apariencia durante toda la jornada de feria sin necesidad de planchar constantemente.
+              </p>
+            </div>
+            <div>
+              <h5 class="font-medium text-gray-900 mb-2">Fibras transpirables</h5>
+              <p class="text-gray-700 text-sm">
+                Mejoran la comodidad en días calurosos manteniendo la elegancia y el comportamiento tradicional del tejido.
+              </p>
+            </div>
+            <div>
+              <h5 class="font-medium text-gray-900 mb-2">Colores duraderos</h5>
+              <p class="text-gray-700 text-sm">
+                Nuevos procesos de tintura que garantizan que los colores se mantengan vivos temporada tras temporada.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Consejos para elección -->
+      <section id="consejos-eleccion" class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Consejos para elegir tu traje perfecto</h2>
+        
+        <p class="mb-6">
+          Elegir un traje de flamenca es una decisión importante que irá más allá de una temporada. Un buen traje, bien cuidado, puede durar décadas y convertirse en una pieza familiar que se transmite de generación en generación.
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Según tu tipo de cuerpo</h3>
+            
+            <div class="space-y-4">
+              <div class="bg-pink-50 border border-pink-200 rounded-lg p-4">
+                <h4 class="font-medium text-pink-900 mb-2">Figura de pera</h4>
+                <p class="text-pink-800 text-sm">
+                  Escotes más amplios, mangas con volumen, colores claros en la parte superior. Los volantes ayudan a equilibrar la silueta.
+                </p>
+              </div>
+              
+              <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                <h4 class="font-medium text-blue-900 mb-2">Figura de manzana</h4>
+                <p class="text-blue-800 text-sm">
+                  Escotes en V, cintura marcada por debajo del pecho, tejidos que no marquen. Evitar volantes en la zona del abdomen.
+                </p>
+              </div>
+              
+              <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                <h4 class="font-medium text-green-900 mb-2">Figura rectangular</h4>
+                <p class="text-green-800 text-sm">
+                  Crear curvas con volantes estratégicos, marcar la cintura, jugar con contrastes de color y texturas.
+                </p>
+              </div>
+              
+              <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
+                <h4 class="font-medium text-purple-900 mb-2">Figura de reloj de arena</h4>
+                <p class="text-purple-800 text-sm">
+                  ¡La suerte está de tu lado! Casi cualquier diseño te favorecerá. Marca la cintura y disfruta de tu silueta.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Según el uso previsto</h3>
+            
+            <div class="space-y-4">
+              <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                <h4 class="font-medium text-yellow-900 mb-2">Para bailar</h4>
+                <p class="text-yellow-800 text-sm mb-2">
+                  Prioriza la comodidad y el movimiento. Tejidos ligeros, cuerpo no muy ajustado, volantes que no interfieran con los pasos.
+                </p>
+                <div class="text-xs text-yellow-700">
+                  <strong>Recomendado:</strong> Georgette, crepé ligero, 4-5 volantes máximo
+                </div>
+              </div>
+              
+              <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                <h4 class="font-medium text-orange-900 mb-2">Para feria</h4>
+                <p class="text-orange-800 text-sm mb-2">
+                  Resistencia y comodidad para largas jornadas. Tejidos que no se arruguen, colores que no se ensucien fácilmente.
+                </p>
+                <div class="text-xs text-orange-700">
+                  <strong>Recomendado:</strong> Algodón con tratamiento, mezclas técnicas
+                </div>
+              </div>
+              
+              <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                <h4 class="font-medium text-red-900 mb-2">Para eventos especiales</h4>
+                <p class="text-red-800 text-sm mb-2">
+                  Aquí puedes permitirte más lujo y espectacularidad. Tejidos nobles, acabados especiales, más volantes.
+                </p>
+                <div class="text-xs text-red-700">
+                  <strong>Recomendado:</strong> Satén, encajes, bordados, 6-7 volantes
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-900 text-white rounded-lg p-6">
+          <h3 class="text-lg font-semibold mb-4">💰 Inversión inteligente</h3>
+          <p class="mb-4">
+            Un traje de flamenca a medida es una inversión a largo plazo. Nuestros consejos para maximizar su valor:
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            <div>
+              <h4 class="font-medium mb-2">Elige colores atemporales</h4>
+              <p class="text-gray-300">Negro, beige, marino, burdeos... nunca pasan de moda y combinan con múltiples complementos.</p>
+            </div>
+            <div>
+              <h4 class="font-medium mb-2">Opta por diseños clásicos</h4>
+              <p class="text-gray-300">Los cortes tradicionales se mantienen elegantes década tras década, mientras que las modas extremas caducan rápido.</p>
+            </div>
+            <div>
+              <h4 class="font-medium mb-2">Invierte en calidad</h4>
+              <p class="text-gray-300">Mejor un traje excelente que dos regulares. La calidad se nota y se mantiene en el tiempo.</p>
+            </div>
+            <div>
+              <h4 class="font-medium mb-2">Piensa en versátilidad</h4>
+              <p class="text-gray-300">Un diseño que sirva tanto para feria como para eventos especiales amortizará mejor la inversión.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cuidado y mantenimiento -->
+      <section id="cuidado-mantenimiento" class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Cuidado y mantenimiento</h2>
+        
+        <p class="mb-6">
+          Un traje de flamenca bien cuidado puede durar décadas manteniendo su belleza original. El cuidado adecuado no solo preserva la inversión, sino que asegura que siempre luzcas espectacular.
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Después de cada uso</h3>
+            <ol class="space-y-3 text-gray-700">
+              <li class="flex items-start space-x-2">
+                <span class="bg-burgundy-700 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold mt-0.5">1</span>
+                <span><strong>Airea inmediatamente:</strong> Cuelga el traje en un lugar ventilado para que se seque cualquier humedad.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="bg-burgundy-700 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold mt-0.5">2</span>
+                <span><strong>Revisa manchas:</strong> Trata cualquier mancha inmediatamente según el tipo de tejido.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="bg-burgundy-700 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold mt-0.5">3</span>
+                <span><strong>Cepilla suavemente:</strong> Elimina polvo y pelusas con un cepillo de cerdas suaves.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="bg-burgundy-700 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold mt-0.5">4</span>
+                <span><strong>Guarda correctamente:</strong> En percha acolchada o doblado con papel de seda.</span>
+              </li>
+            </ol>
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Limpieza profesional</h3>
+            <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-4">
+              <h4 class="font-semibold text-amber-900 mb-2">🧼 Cuándo limpiar en seco</h4>
+              <ul class="text-amber-800 text-sm space-y-1">
+                <li>• Después de 3-4 usos intensivos</li>
+                <li>• Antes de guardar por temporada</li>
+                <li>• Cuando aparezcan manchas difíciles</li>
+                <li>• Si notas pérdida de frescura</li>
+              </ul>
+            </div>
+            
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <h4 class="font-semibold text-blue-900 mb-2">⚠️ Advertencias importantes</h4>
+              <ul class="text-blue-800 text-sm space-y-1">
+                <li>• Nunca laves en casa tejidos delicados</li>
+                <li>• Informa siempre del tipo de mancha</li>
+                <li>• Guarda el ticket de la tintorería</li>
+                <li>• Revisa el resultado antes de irte</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-green-50 border border-green-200 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-green-900 mb-4">🏠 Almacenamiento a largo plazo</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-green-800 text-sm">
+            <div>
+              <h4 class="font-medium mb-2">Ambiente ideal:</h4>
+              <ul class="space-y-1">
+                <li>• Lugar seco y fresco</li>
+                <li>• Sin luz solar directa</li>
+                <li>• Ventilación adecuada</li>
+                <li>• Protegido de insectos</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-medium mb-2">Empaquetado:</h4>
+              <ul class="space-y-1">
+                <li>• Papel de seda entre pliegues</li>
+                <li>• Caja de cartón o funda transpirable</li>
+                <li>• Bolsitas anti-humedad</li>
+                <li>• Revisar cada 6 meses</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">Preguntas frecuentes</h2>
+        
+        <div class="space-y-6">
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">
+              ¿Cuánto tiempo tarda en hacerse un traje de flamenca a medida?
+            </h3>
+            <p class="text-gray-700">
+              Dependiendo de la complejidad del diseño, entre 4 y 8 semanas. Los trajes más sencillos pueden estar listos en 3-4 semanas, mientras que diseños muy elaborados con bordados o detalles especiales pueden requerir hasta 10 semanas. Recomendamos empezar el proceso al menos 2 meses antes de la fecha necesaria.
+            </p>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">
+              ¿Se puede modificar un traje de años anteriores?
+            </h3>
+            <p class="text-gray-700">
+              ¡Por supuesto! Es una práctica muy común y sostenible. Podemos modernizar el corte, cambiar el número de volantes, modificar mangas o escotes, e incluso cambiar completamente el color. Es una excelente manera de renovar un traje que ya no se usa y darle una segunda vida.
+            </p>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">
+              ¿Qué complementos son imprescindibles?
+            </h3>
+            <p class="text-gray-700">
+              Los básicos son: zapatos de baile cómodos, mantón o mantoncillo, peineta y flores para el pelo, y pendientes llamativos. El bolso y los accesorios pueden variar según el estilo personal. En nuestro taller te asesoramos sobre qué complementos funcionan mejor con cada diseño.
+            </p>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">
+              ¿Un traje de flamenca sirve para otras ocasiones?
+            </h3>
+            <p class="text-gray-700">
+              Tradicionalmente, el traje de flamenca se usa en ferias, romerías y eventos flamencos. Sin embargo, versiones más sobrias pueden adaptarse para bodas de día, eventos culturales o celebraciones especiales. Todo depende del diseño y los tejidos elegidos.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conclusión -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Un arte que trasciende generaciones</h2>
+        
+        <p class="text-lg mb-6">
+          El traje de flamenca es mucho más que una prenda de vestir: es la expresión de una cultura, la manifestación de un arte y la conexión con nuestras raíces. En cada puntada que damos en nuestro taller, honramos esta tradición mientras la adaptamos a los tiempos modernos.
+        </p>
+
+        <p class="mb-8">
+          Después de más de 20 años creando trajes de flamenca en Córdoba, hemos aprendido que cada mujer tiene su propio estilo, su propia personalidad y su propia manera de llevar esta prenda tan especial. Nuestro trabajo no es solo coser, sino entender a cada clienta y crear para ella el traje perfecto que la haga sentir única y especial.
+        </p>
+
+        <div class="bg-burgundy-50 border border-burgundy-200 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-burgundy-900 mb-3">¿Sueñas con tu traje de flamenca perfecto?</h3>
+          <p class="text-burgundy-800 mb-4">
+            En Puntadas y Punto convertimos sueños en realidad. Cada traje que creamos es único, pensado especialmente para la mujer que lo llevará. Combinamos tradición, calidad y un toque de modernidad para que te sientas perfecta en tu gran día.
+          </p>
+          <a href="/servicios/trajes-de-flamenca/" class="inline-flex items-center text-burgundy-700 hover:text-burgundy-800 font-medium">
+            Descubre nuestros trajes de flamenca
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </section>
+    </div>
+  </article>
+
+  <!-- Navegación entre artículos -->
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <a href="/blog/errores-comunes-costura-como-evitarlos/" class="text-burgundy-700 hover:text-burgundy-800 font-medium">
+          ← Artículo anterior
+        </a>
+        <a href="/blog/" class="text-burgundy-700 hover:text-burgundy-800 font-medium">
+          Volver al blog
+        </a>
+        <a href="/blog/beneficios-aprender-costura-hobby-oportunidad-laboral/" class="text-burgundy-700 hover:text-burgundy-800 font-medium">
+          Siguiente artículo →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-burgundy-700 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+        ¿Te ha inspirado este artículo?
+      </h2>
+      <p class="text-xl mb-8 opacity-90">
+        Ven a conocer nuestro proceso de creación de trajes de flamenca. 
+        Te enseñamos cada paso y creamos contigo el traje de tus sueños.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/servicios/trajes-de-flamenca/" class="bg-white text-burgundy-700 hover:bg-gray-100 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Ver nuestros trajes
+        </a>
+        <a href="/contacto/" class="border-2 border-white text-white hover:bg-white hover:text-burgundy-700 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Solicitar cita
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

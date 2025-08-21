@@ -1,0 +1,127 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Configuración de fuentes */
+:root {
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* Clases base */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tipografía para encabezados */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.3;
+  color: #1a1a1a;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Enlaces */
+a {
+  transition: color 0.2s ease-in-out;
+}
+
+/* Botones */
+.btn {
+  @apply inline-flex items-center px-6 py-3 rounded-md font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply bg-burgundy-700 text-white hover:bg-burgundy-800 focus:ring-burgundy-500;
+}
+
+.btn-secondary {
+  @apply bg-transparent text-burgundy-700 border-2 border-burgundy-700 hover:bg-burgundy-700 hover:text-white focus:ring-burgundy-500;
+}
+
+/* Contenido responsivo */
+.prose {
+  @apply max-w-none text-gray-700 leading-relaxed;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  font-family: var(--font-heading);
+  color: #1a1a1a;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+}
+
+.prose a {
+  @apply text-burgundy-700 hover:text-burgundy-800 underline;
+}
+
+/* Utilidades para imágenes */
+.image-fade-in {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-fade-in.loaded {
+  opacity: 1;
+}
+
+/* Hero sections */
+.hero-section {
+  @apply relative bg-gray-50 overflow-hidden;
+}
+
+.hero-content {
+  @apply relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32;
+}
+
+/* Cards */
+.card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-200 hover:scale-105;
+}
+
+.card-content {
+  @apply p-6;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  @apply text-sm text-gray-500 space-x-2;
+}
+
+.breadcrumbs a {
+  @apply hover:text-burgundy-700 transition-colors;
+}
+
+/* Skip to content */
+.skip-link {
+  @apply sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-burgundy-700 text-white px-4 py-2 z-50;
+}

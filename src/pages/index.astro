@@ -1,0 +1,219 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Puntadas y Punto - Escuela de Costura y Confección a Medida en Córdoba';
+const description = 'Taller artesanal de costura y patronaje en Córdoba. Clases de costura, confección a medida, trajes de flamenca y transformación de prendas. Experiencia consolidada en el sector.';
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://puntadasypunto.es/#business",
+  "name": "Puntadas y Punto",
+  "description": "Escuela de patronaje, costura, labores en lana y otros tejidos. Confección y arreglos a medida en Córdoba.",
+  "url": "https://puntadasypunto.es",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Glorieta de los Países Bálticos 1, Oficina 11",
+    "addressLocality": "Córdoba",
+    "postalCode": "14014",
+    "addressCountry": "ES"
+  },
+  "telephone": "+34699869097",
+  "email": "lolapedraza@hotmail.es",
+  "openingHours": ["Mo-Fr 10:00-13:30", "Mo-Fr 17:30-20:30"],
+  "priceRange": "€€",
+  "areaServed": {
+    "@type": "City",
+    "name": "Córdoba",
+    "addressCountry": "ES"
+  }
+};
+---
+
+<Layout title={title} description={description} schema={localBusinessSchema}>
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-cream-100 via-cream-200 to-cream-300">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <span class="text-burgundy-700">Puntadas y Punto</span><br>
+            Taller de Costura en Córdoba
+          </h1>
+          <p class="text-xl lg:text-2xl text-gray-700 mb-8 leading-relaxed">
+            <strong>Experiencia consolidada</strong> formando costureras y creando prendas únicas. 
+            Desde clases de costura hasta trajes de flamenca a medida.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 mb-8">
+            <a href="/servicios/clases-de-costura/" class="btn btn-primary text-lg px-8 py-4">
+              Ver nuestras clases
+            </a>
+            <a href="/contacto/" class="btn btn-secondary text-lg px-8 py-4">
+              Contactar ahora
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <img
+            src="/images/Taller de costura y confección a medida en Córdoba – Puntadas y Punto.jpg"
+            alt="Taller de costura Puntadas y Punto en Córdoba"
+            class="rounded-lg shadow-2xl w-full h-auto object-cover"
+            loading="eager"
+            width="600"
+            height="400"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios principales -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Nuestros Servicios
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Desde clases personalizadas hasta confección de prendas únicas, 
+          ofrecemos servicios completos de costura y patronaje en Córdoba.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Clases de costura -->
+        <div class="card group">
+          <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+            <img
+              src="/images/taller-costura-aprendizaje-alumnas-cordoba.jpg"
+              alt="Clases de costura en Córdoba"
+              class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              width="300"
+              height="200"
+            />
+          </div>
+          <div class="card-content">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Clases de Costura</h3>
+            <p class="text-gray-600 mb-4">
+              Aprende desde cero o perfecciona tu técnica. Grupos reducidos y atención personalizada.
+            </p>
+            <a href="/servicios/clases-de-costura/" class="text-burgundy-700 hover:text-burgundy-800 font-medium">
+              Más información →
+            </a>
+          </div>
+        </div>
+
+        <!-- Confección a medida -->
+        <div class="card group">
+          <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+            <img
+              src="/images/vestido-fiesta-azul-encaje-espalda-abierta-cordoba.jpg"
+              alt="Vestido de fiesta azul confeccionado en Córdoba"
+              class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              width="300"
+              height="200"
+            />
+          </div>
+          <div class="card-content">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Confección a Medida</h3>
+            <p class="text-gray-600 mb-4">
+              Vestidos de fiesta, ceremonias y ocasiones especiales. Cada prenda es única.
+            </p>
+            <a href="/servicios/" class="text-burgundy-700 hover:text-burgundy-800 font-medium">
+              Ver trabajos →
+            </a>
+          </div>
+        </div>
+
+        <!-- Trajes de flamenca -->
+        <div class="card group">
+          <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+            <img
+              src="/images/vestido-flamenca-beige-elegante-cordoba.jpg"
+              alt="Traje de flamenca beige elegante"
+              class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              width="300"
+              height="200"
+            />
+          </div>
+          <div class="card-content">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Trajes de Flamenca</h3>
+            <p class="text-gray-600 mb-4">
+              Tradición y elegancia en cada puntada. Diseños que respetan la esencia flamenca.
+            </p>
+            <a href="/servicios/trajes-de-flamenca/" class="text-burgundy-700 hover:text-burgundy-800 font-medium">
+              Descubrir →
+            </a>
+          </div>
+        </div>
+
+        <!-- Transformaciones -->
+        <div class="card group">
+          <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+            <img
+              src="/images/taller-costura-ajuste-falda-cordoba.jpg"
+              alt="Proceso de ajuste y transformación de prendas"
+              class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              width="300"
+              height="200"
+            />
+          </div>
+          <div class="card-content">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Transformaciones</h3>
+            <p class="text-gray-600 mb-4">
+              Dale nueva vida a tus prendas favoritas. Arreglos y transformaciones expertas.
+            </p>
+            <a href="/servicios/" class="text-burgundy-700 hover:text-burgundy-800 font-medium">
+              Consultar →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA final -->
+  <section class="py-20 bg-burgundy-700 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+        ¿Lista para Empezar tu Aventura en la Costura?
+      </h2>
+      <p class="text-xl mb-8 opacity-90">
+        Experiencia consolidada formando costureras expertas y creando prendas únicas. 
+        Tu próximo proyecto te está esperando en nuestro taller de Córdoba.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/servicios/clases-de-costura/" class="bg-white text-burgundy-700 hover:bg-gray-100 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Ver nuestras clases
+        </a>
+        <a href="/contacto/" class="border-2 border-white text-white hover:bg-white hover:text-burgundy-700 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Contactar ahora
+        </a>
+      </div>
+      
+      <!-- Información de contacto rápida -->
+      <div class="mt-12 pt-8 border-t border-burgundy-600">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div>
+            <h4 class="font-semibold mb-2">📍 Dirección</h4>
+            <p class="text-sm opacity-90">Glorieta de los Países Bálticos 1<br>Oficina 11, Córdoba</p>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-2">📞 Teléfono</h4>
+            <p class="text-sm opacity-90">
+              <a href="tel:+34699869097" class="hover:underline">699 86 90 97</a>
+            </p>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-2">⏰ Horario</h4>
+            <p class="text-sm opacity-90">L-V: 10:00-13:30 y 17:30-20:30</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

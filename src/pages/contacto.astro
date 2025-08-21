@@ -1,0 +1,450 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const title = 'Contacto - Puntadas y Punto | Taller de Costura en Córdoba';
+const description = 'Contacta con Puntadas y Punto para información sobre clases de costura, confección a medida o arreglos. Visítanos en Córdoba o llámanos al 699 86 90 97. Consulta nuestros horarios y ubicación.';
+
+const breadcrumbs = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Contacto' }
+];
+
+const contactSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "mainEntity": {
+    "@type": "LocalBusiness",
+    "name": "Puntadas y Punto",
+    "telephone": "+34699869097",
+    "email": "lolapedraza@hotmail.es",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Glorieta de los Países Bálticos 1, Oficina 11",
+      "addressLocality": "Córdoba",
+      "postalCode": "14014",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.8846",
+      "longitude": "-4.7709"
+    },
+    "openingHours": [
+      "Mo-Fr 10:00-13:30",
+      "Mo-Fr 17:30-20:30"
+    ],
+    "url": "https://puntadasypunto.es"
+  }
+};
+---
+
+<Layout title={title} description={description} schema={contactSchema}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="py-16 bg-gradient-to-br from-cream-100 to-cream-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+        <span class="text-burgundy-700">Contacta</span> con Nosotros
+      </h1>
+      <p class="text-xl text-gray-700 leading-relaxed">
+        Estamos aquí para resolver todas tus dudas sobre nuestras clases de costura, 
+        servicios de confección a medida o cualquier consulta que tengas.
+      </p>
+    </div>
+  </section>
+
+  <!-- Información de contacto y formulario -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        
+        <!-- Información de contacto -->
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 mb-8">
+            Información de Contacto
+          </h2>
+          
+          <div class="space-y-6">
+            <!-- Dirección -->
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-burgundy-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-burgundy-700" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-1">Dirección</h3>
+                <address class="not-italic text-gray-600">
+                  Glorieta de los Países Bálticos 1, Oficina 11<br>
+                  14014 Córdoba (Polígono Tecnocórdoba)<br>
+                  <span class="text-sm text-gray-500">Planta baja - Edificio Baobab / Vivero IMDEEC</span>
+                </address>
+              </div>
+            </div>
+
+            <!-- Teléfono -->
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-burgundy-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-burgundy-700" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-1">Teléfono</h3>
+                <a href="tel:+34699869097" class="text-burgundy-700 hover:text-burgundy-800 font-medium">
+                  699 86 90 97
+                </a>
+                <p class="text-sm text-gray-500 mt-1">Llamadas y WhatsApp</p>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-burgundy-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-burgundy-700" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-1">Email</h3>
+                <a href="mailto:lolapedraza@hotmail.es" class="text-burgundy-700 hover:text-burgundy-800 font-medium">
+                  lolapedraza@hotmail.es
+                </a>
+              </div>
+            </div>
+
+            <!-- Horarios -->
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-burgundy-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-burgundy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2">Horarios de Atención</h3>
+                <div class="space-y-1 text-gray-600">
+                  <div class="flex justify-between">
+                    <span>Lunes a Viernes:</span>
+                    <span>10:00 - 13:30</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span></span>
+                    <span>17:30 - 20:30</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>Sábados y Domingos:</span>
+                    <span>Cerrado</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WhatsApp destacado -->
+          <div class="mt-8 p-6 bg-green-50 rounded-lg border border-green-200">
+            <div class="flex items-center space-x-3 mb-3">
+              <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+              </svg>
+              <h3 class="font-semibold text-gray-900">¡Contáctanos por WhatsApp!</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+              La forma más rápida de resolver tus dudas. Te respondemos al momento.
+            </p>
+            <a 
+              href="https://wa.me/34699869097?text=Hola,%20me%20interesa%20información%20sobre%20vuestros%20servicios%20de%20costura"
+              class="inline-flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-medium transition-colors duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+              </svg>
+              <span>Escribir por WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Formulario de contacto -->
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 mb-8">
+            Envíanos un Mensaje
+          </h2>
+          
+          <form class="space-y-6" action="https://formsubmit.co/lolapedraza@hotmail.es" method="POST">
+            <!-- FormSubmit configuration -->
+            <input type="hidden" name="_next" value="https://puntadasypunto.es/contacto/?enviado=true">
+            <input type="hidden" name="_subject" value="Nueva consulta desde la web - Puntadas y Punto">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            
+            <!-- Honeypot field (hidden) -->
+            <input type="text" name="_honey" style="display: none;" />
+            
+            <div>
+              <label for="nombre" class="block text-sm font-medium text-gray-700 mb-2">
+                Nombre completo *
+              </label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-burgundy-500 focus:border-burgundy-500 transition-colors"
+                placeholder="Tu nombre completo"
+              />
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                Email *
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-burgundy-500 focus:border-burgundy-500 transition-colors"
+                placeholder="tu@email.com"
+              />
+            </div>
+
+            <div>
+              <label for="telefono" class="block text-sm font-medium text-gray-700 mb-2">
+                Teléfono
+              </label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-burgundy-500 focus:border-burgundy-500 transition-colors"
+                placeholder="699 86 90 97"
+              />
+            </div>
+
+            <div>
+              <label for="servicio" class="block text-sm font-medium text-gray-700 mb-2">
+                Servicio de interés
+              </label>
+              <select
+                id="servicio"
+                name="servicio"
+                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-burgundy-500 focus:border-burgundy-500 transition-colors"
+              >
+                <option value="">Selecciona un servicio</option>
+                <option value="clases-costura">Clases de costura</option>
+                <option value="confeccion-medida">Confección a medida</option>
+                <option value="trajes-flamenca">Trajes de flamenca</option>
+                <option value="transformaciones">Transformación de prendas</option>
+                <option value="disfraces">Disfraces a medida</option>
+                <option value="patronaje">Patronaje a medida</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-2">
+                Mensaje *
+              </label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="6"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-burgundy-500 focus:border-burgundy-500 transition-colors resize-vertical"
+                placeholder="Cuéntanos en qué podemos ayudarte. Si es para clases, indica tu nivel de costura. Si es para confección, describe lo que necesitas..."
+              ></textarea>
+            </div>
+
+            <div class="flex items-start space-x-3">
+              <input
+                type="checkbox"
+                id="privacidad"
+                name="privacidad"
+                required
+                class="mt-1 w-4 h-4 text-burgundy-600 border-gray-300 rounded focus:ring-burgundy-500"
+              />
+              <label for="privacidad" class="text-sm text-gray-600">
+                He leído y acepto la 
+                <a href="/politica-privacidad/" class="text-burgundy-700 hover:text-burgundy-800 underline">
+                  política de privacidad
+                </a> *
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-burgundy-700 hover:bg-burgundy-800 text-white px-8 py-4 rounded-md font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-burgundy-500 focus:ring-offset-2"
+            >
+              Enviar mensaje
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mapa y cómo llegar -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          Cómo Llegar a Nuestro Taller
+        </h2>
+        <p class="text-lg text-gray-600">
+          Estamos ubicados en una zona céntrica y bien comunicada de Córdoba
+        </p>
+      </div>
+
+      <!-- Información de transporte -->
+      <div class="mb-12">
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center">
+              <span class="mr-2">🚍</span>
+              En Transporte Público (AUCORSA)
+            </h3>
+            <div class="space-y-3 text-gray-600">
+              <p>
+                <strong>Línea E</strong> (Colón ↔ Bda. de los Ángeles/Prisión)
+              </p>
+              <p>
+                Baja en <strong>"Noruega"</strong> o <strong>"Astrónoma Hipatia de Alejandría"</strong> 
+                y camina 4–6 min por C/ Noruega hasta la rotonda "Glorieta de los Países Bálticos".
+              </p>
+              <div class="text-sm text-gray-500">
+                <p>Paradas útiles cerca: Noruega / Noruega DC y Astrónoma Hipatia de Alejandría</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center">
+              <span class="mr-2">🚗</span>
+              En Coche
+            </h3>
+            <div class="space-y-2 text-gray-600">
+              <p><strong>Desde A-4 (Madrid/Sevilla):</strong> Toma la CO-31 (Ronda Este) y sal hacia Av. de Libia / Pol. Las Quemadas / Tecnocórdoba. Sigue las señales a C/ Noruega → Glorieta de los Países Bálticos.</p>
+              <p><strong>Desde N-432 (Granada):</strong> Entra por Av. de Libia, continúa a C/ Noruega hasta la Glorieta de los Países Bálticos.</p>
+              <p><strong>Aparcamiento:</strong> En superficie en las calles del polígono (suele haber sitio)</p>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center">
+              <span class="mr-2">📌</span>
+              Referencias
+            </h3>
+            <div class="space-y-2 text-gray-600">
+              <p>Edificios Baobab (IMDEEC), ubicados en la Glorieta de los Países Bálticos (s/n), Polígono Tecnocórdoba</p>
+            </div>
+          </div>
+
+          <div class="bg-burgundy-50 p-4 rounded-lg border border-burgundy-200">
+            <h4 class="font-semibold text-burgundy-900 mb-2">¿Primera vez que vienes?</h4>
+            <p class="text-burgundy-800 text-sm">
+              Llámanos cuando llegues y te ayudamos a encontrar la oficina. 
+              Estamos en la planta baja del edificio Baobab, oficina número 11.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mapa interactivo - Ancho completo -->
+      <div class="rounded-lg overflow-hidden relative">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.123!2d-4.7709!3d37.8846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zR2xvcmlldGEgZGUgbG9zIFBhw61zZXMgQsOhbHRpY29zIDEsIEPDs3Jkb2Jh!5e0!3m2!1ses!2ses!4v1640000000000!5m2!1ses!2ses"
+          width="100%"
+          height="400"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación de Puntadas y Punto en Córdoba - Glorieta de los Países Bálticos 1"
+          class="w-full h-96 block"
+        ></iframe>
+        
+        <!-- Overlay con enlace a Google Maps -->
+        <div class="absolute top-4 right-4">
+          <a 
+            href="https://maps.google.com/?q=Glorieta+de+los+Países+Bálticos+1,+Edificio+Baobab,+Tecnocórdoba,+14014+Córdoba"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-white hover:bg-gray-50 shadow-md rounded-md px-3 py-2 text-sm font-medium text-gray-700 transition-colors"
+          >
+            Abrir en Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // Manejar mensaje de confirmación
+  document.addEventListener('DOMContentLoaded', function() {
+    // Verificar si se envió el formulario correctamente
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('enviado') === 'true') {
+      // Crear y mostrar mensaje de éxito
+      const successMessage = document.createElement('div');
+      successMessage.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg z-50 max-w-sm';
+      successMessage.innerHTML = `
+        <div class="flex items-center space-x-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+          <div>
+            <h4 class="font-semibold">¡Mensaje enviado!</h4>
+            <p class="text-sm">Te responderemos pronto</p>
+          </div>
+        </div>
+      `;
+      
+      document.body.appendChild(successMessage);
+      
+      // Ocultar el mensaje después de 5 segundos
+      setTimeout(() => {
+        successMessage.style.opacity = '0';
+        successMessage.style.transform = 'translateX(100%)';
+        setTimeout(() => successMessage.remove(), 300);
+      }, 5000);
+      
+      // Limpiar la URL
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+    
+    // Validación del formulario
+    const form = document.querySelector('form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        const honeypot = form.querySelector('input[name="_honey"]') as HTMLInputElement;
+        if (honeypot && honeypot.value !== '') {
+          e.preventDefault();
+          return false;
+        }
+        
+        // Mostrar indicador de carga
+        const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+        if (submitButton) {
+          const originalText = submitButton.textContent || 'Enviar mensaje';
+          submitButton.textContent = 'Enviando...';
+          submitButton.disabled = true;
+          
+          // Restaurar botón después de 3 segundos (por si hay error)
+          setTimeout(() => {
+            if (submitButton) {
+              submitButton.textContent = originalText;
+              submitButton.disabled = false;
+            }
+          }, 3000);
+        }
+      });
+    }
+  });
+</script>

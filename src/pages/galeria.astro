@@ -1,0 +1,544 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const title = 'Galería de Trabajos - Puntadas y Punto | Costura Artesanal Córdoba';
+const description = 'Descubre nuestros trabajos de costura artesanal en Córdoba: trajes de flamenca, vestidos de fiesta, confección infantil, disfraces y transformaciones. Más de 20 años creando prendas únicas.';
+
+const breadcrumbs = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Galería' }
+];
+
+// Organizar imágenes por categorías
+const galleryItems = [
+  // Trajes de flamenca
+  {
+    category: 'flamenca',
+    src: '/images/vestido-flamenca-beige-elegante-cordoba.jpg',
+    alt: 'Traje de flamenca beige elegante confeccionado en Córdoba',
+    title: 'Traje de Flamenca Beige Elegante',
+    description: 'Traje clásico con detalles tradicionales'
+  },
+  {
+    category: 'flamenca',
+    src: '/images/vestido-flamenca-beige-volantes-hecho-a-medida.jpg',
+    alt: 'Vestido de flamenca beige con volantes hecho a medida',
+    title: 'Flamenca Beige con Volantes',
+    description: 'Diseño tradicional con volantes perfectos'
+  },
+  {
+    category: 'flamenca',
+    src: '/images/vestido-flamenca-estampado-flores-colores-vivos.jpg',
+    alt: 'Vestido de flamenca con estampado floral colorido',
+    title: 'Flamenca Estampado Floral',
+    description: 'Colores vivos y estampado alegre'
+  },
+  {
+    category: 'flamenca',
+    src: '/images/vestido-flamenca-infantil-lunares-rosas.jpg',
+    alt: 'Vestido de flamenca infantil con lunares rosas',
+    title: 'Flamenca Infantil Lunares',
+    description: 'Diseño especial para las más pequeñas'
+  },
+  {
+    category: 'flamenca',
+    src: '/images/falda-flamenca-lunares-flores-cordoba.jpg',
+    alt: 'Falda flamenca con lunares y flores en Córdoba',
+    title: 'Falda Flamenca Lunares',
+    description: 'Combinación perfecta de lunares y flores'
+  },
+
+  // Vestidos de fiesta
+  {
+    category: 'fiesta',
+    src: '/images/vestido-fiesta-azul-encaje-espalda-abierta-cordoba.jpg',
+    alt: 'Vestido de fiesta azul con encaje y espalda abierta',
+    title: 'Vestido Fiesta Azul Encaje',
+    description: 'Elegante vestido con espalda descubierta'
+  },
+  {
+    category: 'fiesta',
+    src: '/images/vestido-fiesta-largo-tul-dorado-cordoba.jpg',
+    alt: 'Vestido de fiesta largo en tul dorado',
+    title: 'Vestido Largo Tul Dorado',
+    description: 'Espectacular vestido de gala'
+  },
+  {
+    category: 'fiesta',
+    src: '/images/vestido-fiesta-rojo-asimetrico-cordoba.jpg',
+    alt: 'Vestido de fiesta rojo asimétrico',
+    title: 'Vestido Rojo Asimétrico',
+    description: 'Diseño moderno y llamativo'
+  },
+  {
+    category: 'fiesta',
+    src: '/images/vestido-corto-beige-encaje-artesanal.jpg',
+    alt: 'Vestido corto beige con encaje artesanal',
+    title: 'Vestido Corto Encaje',
+    description: 'Delicado trabajo de encaje a mano'
+  },
+  {
+    category: 'fiesta',
+    src: '/images/conjunto-fiesta-azul-encaje-floral-cordoba.jpg',
+    alt: 'Conjunto de fiesta azul con encaje floral',
+    title: 'Conjunto Fiesta Azul',
+    description: 'Coordinado elegante para ocasiones especiales'
+  },
+  {
+    category: 'fiesta',
+    src: '/images/conjunto-fiesta-blusa-verde-pantalon-azul-cordoba.jpg',
+    alt: 'Conjunto de fiesta con blusa verde y pantalón azul',
+    title: 'Conjunto Verde y Azul',
+    description: 'Combinación moderna y sofisticada'
+  },
+  {
+    category: 'fiesta',
+    src: '/images/vestidos-invitada-boda-elegantes-cordoba.jpg',
+    alt: 'Vestidos elegantes para invitadas de boda',
+    title: 'Vestidos Invitada Boda',
+    description: 'Perfectos para ser la invitada ideal'
+  },
+
+  // Ropa infantil
+  {
+    category: 'infantil',
+    src: '/images/capa-infantil-rosa-lazo-artesanal-cordoba.jpg',
+    alt: 'Capa infantil rosa con lazo artesanal',
+    title: 'Capa Infantil Rosa',
+    description: 'Dulce capa con detalles únicos'
+  },
+  {
+    category: 'infantil',
+    src: '/images/chaqueta-infantil-amarilla-freddie-mercury-cordoba.jpg',
+    alt: 'Chaqueta infantil amarilla estilo Freddie Mercury',
+    title: 'Chaqueta Freddie Mercury',
+    description: 'Diseño divertido y original'
+  },
+  {
+    category: 'infantil',
+    src: '/images/traje-regional-infantil-costura-artesanal.jpg',
+    alt: 'Traje regional infantil de costura artesanal',
+    title: 'Traje Regional Infantil',
+    description: 'Tradición en miniatura'
+  },
+  {
+    category: 'infantil',
+    src: '/images/peto-bebe-blanco-bordado-artesanal-cordoba.jpg',
+    alt: 'Peto de bebé blanco con bordado artesanal',
+    title: 'Peto Bebé Bordado',
+    description: 'Delicado bordado a mano'
+  },
+  {
+    category: 'infantil',
+    src: '/images/patucos-bebe-bordados-hechos-a-mano.jpg',
+    alt: 'Patucos de bebé bordados hechos a mano',
+    title: 'Patucos Bordados',
+    description: 'Primeros zapatos con amor'
+  },
+  {
+    category: 'infantil',
+    src: '/images/manta-sensorial-bebe-artesanal-cordoba.jpg',
+    alt: 'Manta sensorial para bebé artesanal',
+    title: 'Manta Sensorial Bebé',
+    description: 'Estimulación temprana y suavidad'
+  },
+
+  // Disfraces
+  {
+    category: 'disfraces',
+    src: '/images/vestuario-epoca-medieval-obras-teatro-cordoba.jpg',
+    alt: 'Vestuario de época medieval para obras de teatro',
+    title: 'Vestuario Medieval',
+    description: 'Trajes históricos para teatro'
+  },
+
+  // Taller
+  {
+    category: 'taller',
+    src: '/images/taller-costura-ajuste-falda-cordoba.jpg',
+    alt: 'Proceso de ajuste de falda en el taller',
+    title: 'Proceso de Ajuste',
+    description: 'Técnicas profesionales de confección'
+  },
+  {
+    category: 'taller',
+    src: '/images/taller-costura-aprendizaje-alumnas-cordoba.jpg',
+    alt: 'Alumnas aprendiendo en las clases de costura',
+    title: 'Clases de Costura',
+    description: 'Ambiente de aprendizaje acogedor'
+  },
+  {
+    category: 'taller',
+    src: '/images/Taller de costura y confección a medida en Córdoba – Puntadas y Punto.jpg',
+    alt: 'Interior del taller Puntadas y Punto',
+    title: 'Nuestro Taller',
+    description: 'Espacio de trabajo profesional'
+  },
+  {
+    category: 'taller',
+    src: '/images/exposicion-vestidos-fiesta-alta-costura-cordoba.jpg',
+    alt: 'Exposición de vestidos de fiesta de alta costura',
+    title: 'Exposición Alta Costura',
+    description: 'Muestra de nuestros mejores trabajos'
+  },
+
+  // Confección general
+  {
+    category: 'general',
+    src: '/images/abrigo-mujer-estampado-geometrico-cordoba.jpg',
+    alt: 'Abrigo de mujer con estampado geométrico',
+    title: 'Abrigo Estampado Geométrico',
+    description: 'Elegancia y modernidad'
+  },
+  {
+    category: 'general',
+    src: '/images/blusa-mujer-estampado-floral-cordoba.jpg',
+    alt: 'Blusa de mujer con estampado floral',
+    title: 'Blusa Estampado Floral',
+    description: 'Femenina y versátil'
+  },
+  {
+    category: 'general',
+    src: '/images/chaleco-pelo-sintetico-colorido-cordoba.jpg',
+    alt: 'Chaleco de pelo sintético colorido',
+    title: 'Chaleco Pelo Sintético',
+    description: 'Calidez y estilo'
+  },
+  {
+    category: 'general',
+    src: '/images/chaqueta-roja-vintage-botones-metalicos-cordoba.jpg',
+    alt: 'Chaqueta roja vintage con botones metálicos',
+    title: 'Chaqueta Vintage Roja',
+    description: 'Estilo retro con carácter'
+  },
+  {
+    category: 'general',
+    src: '/images/falda-lapiz-estampado-floral-blusa-roja-cordoba.jpg',
+    alt: 'Falda lápiz estampada con blusa roja',
+    title: 'Conjunto Falda Lápiz',
+    description: 'Silueta clásica y elegante'
+  },
+  {
+    category: 'general',
+    src: '/images/mono-mujer-estampado-flores-cordoba.jpg',
+    alt: 'Mono de mujer con estampado de flores',
+    title: 'Mono Estampado Flores',
+    description: 'Comodidad y estilo en una pieza'
+  }
+];
+
+const categories = [
+  { id: 'todos', name: 'Todos los trabajos', count: galleryItems.length },
+  { id: 'flamenca', name: 'Trajes de Flamenca', count: galleryItems.filter(item => item.category === 'flamenca').length },
+  { id: 'fiesta', name: 'Vestidos de Fiesta', count: galleryItems.filter(item => item.category === 'fiesta').length },
+  { id: 'infantil', name: 'Ropa Infantil', count: galleryItems.filter(item => item.category === 'infantil').length },
+  { id: 'taller', name: 'Nuestro Taller', count: galleryItems.filter(item => item.category === 'taller').length },
+  { id: 'general', name: 'Confección General', count: galleryItems.filter(item => item.category === 'general').length },
+  { id: 'disfraces', name: 'Disfraces', count: galleryItems.filter(item => item.category === 'disfraces').length }
+];
+
+const gallerySchema = {
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "Galería de trabajos de costura artesanal",
+  "description": "Muestra de trabajos realizados en el taller Puntadas y Punto",
+  "publisher": {
+    "@type": "LocalBusiness",
+    "name": "Puntadas y Punto"
+  }
+};
+---
+
+<Layout title={title} description={description} schema={gallerySchema}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="py-16 bg-gradient-to-br from-cream-100 to-cream-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+        <span class="text-burgundy-700">Galería</span> de Nuestros Trabajos
+      </h1>
+      <p class="text-xl text-gray-700 leading-relaxed">
+        Descubre la calidad y dedicación que ponemos en cada proyecto. 
+        Más de 20 años creando prendas únicas y especiales en Córdoba.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filtros -->
+  <section class="py-8 bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap justify-center gap-2 md:gap-4">
+        {categories.map((category) => (
+          <button
+            data-filter={category.id}
+            class={`filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+              category.id === 'todos' 
+                ? 'bg-burgundy-700 text-white' 
+                : 'bg-gray-100 text-gray-700 hover:bg-burgundy-100 hover:text-burgundy-700'
+            }`}
+          >
+            {category.name}
+            <span class="ml-1 text-xs opacity-75">({category.count})</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {galleryItems.map((item, index) => (
+          <div 
+            class="gallery-item group cursor-pointer"
+            data-category={item.category}
+            data-index={index}
+          >
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 group-hover:scale-105">
+              <div class="aspect-w-4 aspect-h-3 overflow-hidden">
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+              </div>
+              <div class="p-4">
+                <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-burgundy-700 transition-colors">
+                  {item.title}
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Mensaje cuando no hay resultados -->
+      <div id="no-results" class="hidden text-center py-16">
+        <div class="text-gray-500">
+          <svg class="w-16 h-16 mx-auto mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <h3 class="text-lg font-medium text-gray-900 mb-2">No se encontraron trabajos</h3>
+          <p class="text-gray-600">Intenta con otra categoría o ve todos los trabajos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal para ver imágenes ampliadas -->
+  <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center p-4">
+    <div class="relative max-w-4xl w-full">
+      <button 
+        id="close-modal" 
+        class="absolute top-4 right-4 text-white hover:text-gray-300 z-10"
+        aria-label="Cerrar"
+      >
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      
+      <div class="bg-white rounded-lg overflow-hidden">
+        <img 
+          id="modal-image" 
+          src="" 
+          alt="" 
+          class="w-full h-auto max-h-96 object-contain"
+        />
+        <div class="p-6">
+          <h3 id="modal-title" class="text-xl font-bold text-gray-900 mb-2"></h3>
+          <p id="modal-description" class="text-gray-600"></p>
+        </div>
+      </div>
+      
+      <!-- Navegación -->
+      <button 
+        id="prev-image" 
+        class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300"
+        aria-label="Imagen anterior"
+      >
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      
+      <button 
+        id="next-image" 
+        class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300"
+        aria-label="Imagen siguiente"
+      >
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-burgundy-700 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+        ¿Te Gusta Lo Que Ves?
+      </h2>
+      <p class="text-xl mb-8 opacity-90">
+        Cada una de estas prendas está hecha con amor y dedicación. 
+        ¿Quieres que creemos algo especial para ti?
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/servicios/confeccion-a-medida/" class="bg-white text-burgundy-700 hover:bg-gray-100 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Solicitar presupuesto
+        </a>
+        <a href="/contacto/" class="border-2 border-white text-white hover:bg-white hover:text-burgundy-700 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Más información
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script define:vars={{ galleryItems }}>
+  // Funcionalidad de filtros y modal
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const noResults = document.getElementById('no-results');
+    const modal = document.getElementById('image-modal');
+    const modalImage = document.getElementById('modal-image');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDescription = document.getElementById('modal-description');
+    const closeModal = document.getElementById('close-modal');
+    const prevButton = document.getElementById('prev-image');
+    const nextButton = document.getElementById('next-image');
+    
+    let currentImageIndex = 0;
+    let filteredItems = [];
+
+    // Filtrado
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const filter = this.getAttribute('data-filter');
+        
+        // Actualizar botones activos
+        filterButtons.forEach(btn => {
+          btn.classList.remove('bg-burgundy-700', 'text-white');
+          btn.classList.add('bg-gray-100', 'text-gray-700');
+        });
+        this.classList.remove('bg-gray-100', 'text-gray-700');
+        this.classList.add('bg-burgundy-700', 'text-white');
+        
+        // Filtrar elementos
+        let visibleCount = 0;
+        filteredItems = [];
+        
+        galleryItems.forEach((item, index) => {
+          const category = item.getAttribute('data-category');
+          if (filter === 'todos' || category === filter) {
+            item.style.display = 'block';
+            filteredItems.push({ element: item, originalIndex: index });
+            visibleCount++;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+        
+        // Mostrar/ocultar mensaje de sin resultados
+        if (visibleCount === 0) {
+          noResults.classList.remove('hidden');
+        } else {
+          noResults.classList.add('hidden');
+        }
+      });
+    });
+
+    // Modal de imágenes
+    galleryItems.forEach((item, index) => {
+      item.addEventListener('click', function() {
+        const originalIndex = parseInt(this.getAttribute('data-index'));
+        const itemData = galleryItems[originalIndex];
+        
+        // Encontrar el índice en los elementos filtrados
+        currentImageIndex = filteredItems.findIndex(item => 
+          parseInt(item.element.getAttribute('data-index')) === originalIndex
+        );
+        
+        if (currentImageIndex === -1) {
+          currentImageIndex = 0;
+        }
+        
+        showModal(originalIndex);
+      });
+    });
+
+    function showModal(originalIndex) {
+      const itemData = galleryItems[originalIndex];
+      modalImage.src = itemData.querySelector('img').src;
+      modalImage.alt = itemData.querySelector('img').alt;
+      modalTitle.textContent = itemData.querySelector('h3').textContent;
+      modalDescription.textContent = itemData.querySelector('p').textContent;
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function hideModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    function showPrevImage() {
+      if (filteredItems.length === 0) return;
+      currentImageIndex = (currentImageIndex - 1 + filteredItems.length) % filteredItems.length;
+      const originalIndex = parseInt(filteredItems[currentImageIndex].element.getAttribute('data-index'));
+      showModal(originalIndex);
+    }
+
+    function showNextImage() {
+      if (filteredItems.length === 0) return;
+      currentImageIndex = (currentImageIndex + 1) % filteredItems.length;
+      const originalIndex = parseInt(filteredItems[currentImageIndex].element.getAttribute('data-index'));
+      showModal(originalIndex);
+    }
+
+    // Event listeners del modal
+    closeModal.addEventListener('click', hideModal);
+    prevButton.addEventListener('click', showPrevImage);
+    nextButton.addEventListener('click', showNextImage);
+    
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        hideModal();
+      }
+    });
+
+    // Teclado
+    document.addEventListener('keydown', function(e) {
+      if (!modal.classList.contains('hidden')) {
+        switch(e.key) {
+          case 'Escape':
+            hideModal();
+            break;
+          case 'ArrowLeft':
+            showPrevImage();
+            break;
+          case 'ArrowRight':
+            showNextImage();
+            break;
+        }
+      }
+    });
+
+    // Inicializar filtros
+    filteredItems = Array.from(galleryItems).map((item, index) => ({
+      element: item,
+      originalIndex: index
+    }));
+  });
+</script>

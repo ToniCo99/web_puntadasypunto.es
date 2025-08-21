@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://puntadasypunto.es/sitemap-index.xml
+
+# Páginas importantes para SEO
+Allow: /servicios/
+Allow: /clases-de-costura/
+Allow: /confeccion-a-medida/
+Allow: /trajes-de-flamenca/
+Allow: /galeria/
+Allow: /blog/
+Allow: /contacto/
+Allow: /quienes-somos/
+
+# Evitar archivos innecesarios
+Disallow: /src/
+Disallow: /_astro/
+Disallow: /medios/
+
+# Optimización para buscadores
+Crawl-delay: 1
