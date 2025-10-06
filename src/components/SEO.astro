@@ -34,7 +34,10 @@ const imageUrl = new URL(image, Astro.site);
 <link rel="canonical" href={canonicalUrl} />
 
 <!-- Robots -->
-{noindex && <meta name="robots" content="noindex, nofollow" />}
+{noindex ? 
+  <meta name="robots" content="noindex, nofollow" /> : 
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+}
 
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -59,13 +62,29 @@ const imageUrl = new URL(image, Astro.site);
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={imageUrl} />
 
+<!-- SEO Local -->
+<meta name="geo.region" content="ES-CO" />
+<meta name="geo.placename" content="Córdoba" />
+<meta name="geo.position" content="37.8846;-4.7709" />
+<meta name="ICBM" content="37.8846, -4.7709" />
+
+<!-- Keywords y categorías -->
+<meta name="keywords" content="costura córdoba, clases costura, confección medida, vestuario teatro, patronaje, trajes flamenca, taller costura, escuela costura córdoba" />
+<meta name="author" content="Puntadas y Punto" />
+<meta name="language" content="es" />
+<meta name="revisit-after" content="7 days" />
+
+<!-- Verificación de propiedad (para futuras integraciones) -->
+<!-- <meta name="google-site-verification" content="GOOGLE_VERIFICATION_CODE" /> -->
+<!-- <meta name="msvalidate.01" content="BING_VERIFICATION_CODE" /> -->
+
 <!-- Local Business Schema -->
 <script type="application/ld+json" set:html={JSON.stringify({
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": "https://puntadasypunto.es",
   "name": "Puntadas y Punto",
-  "description": "Taller artesanal de costura y patronaje en Córdoba. Escuela de costura, confección a medida y trajes de flamenca.",
+  "description": "Taller artesanal de costura y patronaje en Córdoba con más de 30 años de experiencia. Especialistas en confección a medida, clases de costura y vestuario de teatro.",
   "url": "https://puntadasypunto.es",
   "telephone": "+34699869097",
   "email": "lolapedraza@hotmail.es",
@@ -91,27 +110,28 @@ const imageUrl = new URL(image, Astro.site);
   "serviceType": [
     "Clases de costura",
     "Confección a medida",
-    "Patronaje",
-    "Trajes de flamenca",
-    "Arreglos de ropa",
-    "Transformación de prendas"
+    "Patronaje a medida",
+    "Vestuario de teatro",
+    "Disfraces a medida",
+    "Transformación de prendas",
+    "Trajes de flamenca"
   ],
   "areaServed": {
     "@type": "City",
     "name": "Córdoba",
     "addressCountry": "ES"
   },
-  "foundingDate": "2000",
+  "foundingDate": "2014",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Servicios de costura",
+    "name": "Servicios de costura y confección",
     "itemListElement": [
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Course",
           "name": "Clases de costura y patronaje",
-          "description": "Cursos de costura desde nivel básico a avanzado en grupos reducidos"
+          "description": "Cursos de costura desde nivel básico a avanzado en grupos reducidos de máximo 6 alumnas"
         }
       },
       {
@@ -120,6 +140,22 @@ const imageUrl = new URL(image, Astro.site);
           "@type": "Service",
           "name": "Confección a medida",
           "description": "Confección artesanal de vestidos, trajes y prendas personalizadas"
+        }
+      },
+      {
+        "@type": "Offer", 
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vestuario de teatro y espectáculos",
+          "description": "Diseño y confección de vestuario teatral, danza y espectáculos profesionales"
+        }
+      },
+      {
+        "@type": "Offer", 
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Patronaje a medida",
+          "description": "Creación de patrones personalizados para todo tipo de prendas"
         }
       }
     ]
@@ -139,3 +175,38 @@ const imageUrl = new URL(image, Astro.site);
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<!-- Google Analytics (Placeholder - Añadir ID real cuando esté disponible) -->
+<!-- 
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
+-->
+
+<!-- Schema.org adicional para mejorar SEO -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://puntadasypunto.es/#website",
+  "url": "https://puntadasypunto.es",
+  "name": "Puntadas y Punto",
+  "description": "Taller artesanal de costura y patronaje en Córdoba",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://puntadasypunto.es/#organization"
+  },
+  "potentialAction": [
+    {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://puntadasypunto.es/servicios/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  ]
+})} />

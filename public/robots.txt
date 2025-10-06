@@ -4,11 +4,17 @@ Allow: /
 # Sitemap
 Sitemap: https://puntadasypunto.es/sitemap-index.xml
 
-# Páginas importantes para SEO
+# Páginas importantes para SEO - Servicios principales
 Allow: /servicios/
-Allow: /clases-de-costura/
-Allow: /confeccion-a-medida/
-Allow: /trajes-de-flamenca/
+Allow: /servicios/clases-de-costura/
+Allow: /servicios/confeccion-a-medida/
+Allow: /servicios/vestuario-teatro/
+Allow: /servicios/trajes-de-flamenca/
+Allow: /servicios/patronaje-a-medida/
+Allow: /servicios/transformacion-de-prendas/
+Allow: /servicios/disfraces-a-medida/
+
+# Páginas importantes - Contenido
 Allow: /galeria/
 Allow: /blog/
 Allow: /contacto/
@@ -18,6 +24,19 @@ Allow: /quienes-somos/
 Disallow: /src/
 Disallow: /_astro/
 Disallow: /medios/
+Disallow: /dist/
+Disallow: /*.css$
+Disallow: /*.js$
+
+# Páginas administrativas
+Disallow: /aviso-legal/
 
 # Optimización para buscadores
+Crawl-delay: 1
+
+# Buscadores específicos
+User-agent: Googlebot
+Crawl-delay: 0
+
+User-agent: Bingbot  
 Crawl-delay: 1

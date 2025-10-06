@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" 
+        xmlns:xhtml="http://www.w3.org/1999/xhtml" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <!-- PÁGINA PRINCIPAL -->
+  <url>
+    <loc>https://puntadasypunto.es/</loc>
+    <lastmod>2025-10-06T12:24:12.014Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- PÁGINAS INSTITUCIONALES -->
+  <url>
+    <loc>https://puntadasypunto.es/aviso-legal/</loc>
+    <lastmod>2025-10-06T12:24:12.014Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://puntadasypunto.es/contacto/</loc>
+    <lastmod>2025-10-06T12:24:12.014Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://puntadasypunto.es/galeria/</loc>
+    <lastmod>2025-10-06T12:24:12.014Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://puntadasypunto.es/quienes-somos/</loc>
+    <lastmod>2025-10-06T12:24:12.014Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- SERVICIOS -->
+  <url>
+    <loc>https://puntadasypunto.es/servicios/</loc>
+    <lastmod>2025-10-06T12:24:12.014Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://puntadasypunto.es/servicios/clases-de-costura/</loc>
+    <lastmod>2025-10-06T12:24:12.014Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://puntadasypunto.es/servicios/confeccion-a-medida/</loc>
+    <lastmod>2025-10-06T12:24:12.014Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://puntadasypunto.es/servicios/disfraces-a-medida/</loc>
+    <lastmod>2025-10-06T12:24:12.014Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://puntadasypunto.es/servicios/patronaje-a-medida/</loc>
+    <lastmod>2025-10-06T12:24:12.014Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://puntadasypunto.es/servicios/trajes-de-flamenca/</loc>
+    <lastmod>2025-10-06T12:24:12.014Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://puntadasypunto.es/servicios/transformacion-de-prendas/</loc>
+    <lastmod>2025-10-06T12:24:12.014Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://puntadasypunto.es/servicios/vestuario-teatro/</loc>
+    <lastmod>2025-10-06T12:24:12.014Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- BLOG -->
+  <url>
+    <loc>https://puntadasypunto.es/blog/</loc>
+    <lastmod>2025-10-06T12:24:12.014Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://puntadasypunto.es/blog/beneficios-aprender-costura-hobby-oportunidad-laboral/</loc>
+    <lastmod>2025-10-06T12:24:12.014Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://puntadasypunto.es/blog/errores-comunes-costura-como-evitarlos/</loc>
+    <lastmod>2025-10-06T12:24:12.014Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://puntadasypunto.es/blog/moda-flamenca-tradicion-tendencias-actuales/</loc>
+    <lastmod>2025-10-06T12:24:12.014Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
