@@ -1,0 +1,379 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const title = 'Transformación de Prendas en Córdoba - Puntadas y Punto';
+const description = 'Servicio de transformación y arreglos de prendas en Córdoba. Dale nueva vida a tus prendas favoritas con modificaciones expertas y reparaciones especializadas.';
+
+const breadcrumbs = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Servicios', href: '/servicios/' },
+  { label: 'Transformación de prendas' }
+];
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Transformación de prendas",
+  "description": "Arreglos, modificaciones y transformaciones expertas de prendas",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Puntadas y Punto",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Glorieta de los Países Bálticos 1, Oficina 11",
+      "addressLocality": "Córdoba",
+      "postalCode": "14014",
+      "addressCountry": "ES"
+    }
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Córdoba",
+    "addressCountry": "ES"
+  },
+  "serviceType": "Transformación y arreglos de prendas"
+};
+---
+
+<Layout title={title} description={description} schema={serviceSchema}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="py-16 bg-gradient-to-br from-cream-100 to-cream-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <span class="text-burgundy-700">Transformación</span> de Prendas en Córdoba
+          </h1>
+          <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+            Dale nueva vida a tus prendas favoritas. Arreglos, modificaciones y 
+            transformaciones completas para adaptar la ropa a tus necesidades actuales. 
+            Sostenibilidad y calidad en cada proyecto.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#servicios" class="btn btn-primary">
+              Ver servicios
+            </a>
+            <a href="/contacto/" class="btn btn-secondary">
+              Consultar
+            </a>
+          </div>
+        </div>
+        <div>
+          <img
+            src="/images/new_images/Transformación de falda.jpg"
+            alt="Transformación de prendas en Puntadas y Punto, Córdoba"
+            class="rounded-lg shadow-xl w-full h-auto object-cover"
+            loading="eager"
+            width="600"
+            height="400"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filosofía -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Sostenibilidad y Creatividad
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          En un mundo donde la moda rápida domina, nosotros apostamos por dar nueva vida 
+          a las prendas existentes. Cada transformación es un acto de creatividad y sostenibilidad.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Sostenibilidad -->
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Moda Sostenible</h3>
+          <p class="text-gray-600 text-sm">
+            Reducimos el impacto ambiental dando nueva vida a prendas existentes 
+            en lugar de crear nuevas desde cero.
+          </p>
+        </div>
+
+        <!-- Creatividad -->
+        <div class="text-center">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-purple-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Creatividad Experta</h3>
+          <p class="text-gray-600 text-sm">
+            Transformamos prendas con creatividad y técnica, creando diseños 
+            únicos que se adaptan a tu estilo actual.
+          </p>
+        </div>
+
+        <!-- Economía -->
+        <div class="text-center">
+          <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-yellow-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Solución Económica</h3>
+          <p class="text-gray-600 text-sm">
+            Transformar es más económico que comprar nuevo, y obtienes 
+            una prenda única adaptada a tus gustos actuales.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Nuestros Servicios de Transformación
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Desde ajustes simples hasta transformaciones completas, 
+          adaptamos cada prenda a tus necesidades y estilo actual.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Ajustes de talla -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-4">
+            <h3 class="text-xl font-bold text-white">Ajustes de Talla</h3>
+            <p class="text-blue-100">Adaptamos la prenda a tu cuerpo actual</p>
+          </div>
+          <div class="p-6">
+            <h4 class="font-semibold text-gray-900 mb-3">Incluye:</h4>
+            <ul class="space-y-2 text-gray-600 mb-6">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-blue-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Entallado o ensanche de prendas
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-blue-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Acortado o alargado de largos
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-blue-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Ajuste de mangas y sisas
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-blue-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Modificación de escotes
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Cambios de estilo -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-purple-500 to-purple-600 px-6 py-4">
+            <h3 class="text-xl font-bold text-white">Cambios de Estilo</h3>
+            <p class="text-purple-100">Moderniza y personaliza tus prendas</p>
+          </div>
+          <div class="p-6">
+            <h4 class="font-semibold text-gray-900 mb-3">Incluye:</h4>
+            <ul class="space-y-2 text-gray-600 mb-6">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-purple-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Cambio de mangas (largas a cortas)
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-purple-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Modificación de escotes y cuellos
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-purple-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Añadir o quitar detalles decorativos
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-purple-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Transformación de vestidos en conjuntos
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Reparaciones -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-green-500 to-green-600 px-6 py-4">
+            <h3 class="text-xl font-bold text-white">Reparaciones Especializadas</h3>
+            <p class="text-green-100">Solucionamos cualquier problema</p>
+          </div>
+          <div class="p-6">
+            <h4 class="font-semibold text-gray-900 mb-3">Incluye:</h4>
+            <ul class="space-y-2 text-gray-600 mb-6">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Reparación de roturas y desgarros
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Sustitución de cremalleras
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Refuerzo de costuras débiles
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Restauración de prendas vintage
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Modernización -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-4">
+            <h3 class="text-xl font-bold text-white">Modernización Vintage</h3>
+            <p class="text-orange-100">Actualiza prendas clásicas</p>
+          </div>
+          <div class="p-6">
+            <h4 class="font-semibold text-gray-900 mb-3">Incluye:</h4>
+            <ul class="space-y-2 text-gray-600 mb-6">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-orange-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Actualización de siluetas vintage
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-orange-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Adaptación a tendencias actuales
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-orange-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Conservación del carácter original
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-orange-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Mejora de la funcionalidad
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Cómo Trabajamos
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Cada transformación es única. Estudiamos cada prenda individualmente 
+          para determinar las mejores opciones de modificación.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <div class="flex items-start space-x-4">
+          <div class="w-8 h-8 bg-burgundy-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">1</div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Evaluación de la prenda</h3>
+            <p class="text-gray-700">
+              Analizamos el estado, calidad del tejido, construcción original y posibilidades de transformación.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <div class="w-8 h-8 bg-burgundy-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">2</div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Propuesta de transformación</h3>
+            <p class="text-gray-700">
+              Te presentamos diferentes opciones de modificación con presupuesto detallado y tiempo estimado.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <div class="w-8 h-8 bg-burgundy-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">3</div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Ejecución experta</h3>
+            <p class="text-gray-700">
+              Realizamos la transformación con técnicas profesionales, cuidando cada detalle para un resultado perfecto.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <div class="w-8 h-8 bg-burgundy-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">4</div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Prueba y ajustes finales</h3>
+            <p class="text-gray-700">
+              Realizamos una prueba final para asegurar el ajuste perfecto y hacemos los últimos retoques necesarios.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-burgundy-700 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+        ¿Tienes Prendas que Quieres Transformar?
+      </h2>
+      <p class="text-xl mb-8 opacity-90">
+        Trae tus prendas favoritas y las convertiremos en algo nuevo y especial. 
+        Sostenibilidad, creatividad y calidad en cada transformación.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contacto/" class="bg-white text-burgundy-700 hover:bg-gray-100 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Consultar transformación
+        </a>
+        <a href="tel:+34699869097" class="border-2 border-white text-white hover:bg-white hover:text-burgundy-700 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Llamar ahora
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

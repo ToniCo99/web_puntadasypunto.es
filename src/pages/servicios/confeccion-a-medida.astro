@@ -2,20 +2,20 @@
 import Layout from '../../layouts/Layout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
-const title = 'Trajes de Flamenca a Medida en Córdoba - Puntadas y Punto';
-const description = 'Confección artesanal de trajes de flamenca en Córdoba. Diseños únicos, tradición y elegancia. Más de 20 años creando trajes flamencos de alta calidad con atención personalizada.';
+const title = 'Confección a Medida en Córdoba - Puntadas y Punto';
+const description = 'Confección artesanal de prendas a medida en Córdoba. Vestidos de fiesta, ceremonias y ocasiones especiales. Cada prenda es única y personalizada según tus medidas y estilo.';
 
 const breadcrumbs = [
   { label: 'Inicio', href: '/' },
   { label: 'Servicios', href: '/servicios/' },
-  { label: 'Trajes de flamenca' }
+  { label: 'Confección a medida' }
 ];
 
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Confección de trajes de flamenca a medida",
-  "description": "Diseño y confección artesanal de trajes de flamenca tradicionales y modernos",
+  "name": "Confección de prendas a medida",
+  "description": "Diseño y confección artesanal de prendas únicas adaptadas a medidas exactas",
   "provider": {
     "@type": "LocalBusiness",
     "name": "Puntadas y Punto",
@@ -32,11 +32,7 @@ const serviceSchema = {
     "name": "Córdoba",
     "addressCountry": "ES"
   },
-  "serviceType": "Confección de trajes de flamenca",
-  "offers": {
-    "@type": "Offer",
-    "description": "Trajes de flamenca a medida personalizados"
-  }
+  "serviceType": "Confección a medida"
 };
 ---
 
@@ -49,25 +45,26 @@ const serviceSchema = {
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
           <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            <span class="text-burgundy-700">Trajes de Flamenca</span> a Medida en Córdoba
+            <span class="text-burgundy-700">Confección a Medida</span> en Córdoba
           </h1>
           <p class="text-xl text-gray-700 mb-8 leading-relaxed">
-            Creamos trajes de flamenca únicos que combinan la tradición andaluza con tu estilo personal. 
-            Cada traje es una obra de arte confeccionada completamente a mano en nuestro taller.
+            Creamos prendas únicas adaptadas perfectamente a tu cuerpo y estilo. 
+            Vestidos de fiesta, trajes, ropa infantil y mucho más. 
+            Pide tu cita y te atenderemos sin compromiso.
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
             <a href="#proceso" class="btn btn-primary">
               Ver proceso
             </a>
             <a href="/contacto/" class="btn btn-secondary">
-              Solicitar presupuesto
+              Solicitar cita
             </a>
           </div>
         </div>
         <div>
           <img
-            src="/images/new_images/Conjunto de flamenca en tonos beige con volantes, blusa blanca y fajín ancho marrón con flor – look elegante para romería o feria.jpg"
-            alt="Traje de flamenca elegante confeccionado en Puntadas y Punto, Córdoba"
+            src="/images/new_images/Vestido de fiesta largo color nude con falda de tul y cuerpo bordado en pedrería – diseño elegante para gala o ceremonia.jpg"
+            alt="Vestido de fiesta confeccionado a medida en Puntadas y Punto, Córdoba"
             class="rounded-lg shadow-xl w-full h-auto object-cover"
             loading="eager"
             width="600"
@@ -78,82 +75,76 @@ const serviceSchema = {
     </div>
   </section>
 
-  <!-- Galería de trajes -->
+  <!-- Tipos de prendas -->
   <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-          Nuestros Trajes de Flamenca
+          Tipos de Prendas que Confeccionamos
         </h2>
         <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-          Cada traje es único y refleja la personalidad de quien lo lleva. 
-          Descubre algunos de nuestros trabajos más destacados.
+          Desde vestidos de fiesta hasta ropa infantil personalizada, 
+          cada prenda es única y está hecha especialmente para ti.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-        <!-- Traje 1 -->
+        <!-- Vestidos de fiesta -->
         <div class="group cursor-pointer">
           <div class="aspect-w-3 aspect-h-4 overflow-hidden rounded-lg mb-4">
             <img
-              src="/images/new_images/Vestido de flamenca estampado negro y turquesa con volantes y mantoncillo – diseño tradicional andaluz.jpg"
-              alt="Traje de flamenca estampado negro y turquesa con volantes"
+              src="/images/new_images/Vestido de fiesta rojo con escote cruzado y detalle de plumas – confección a medida.jpg"
+              alt="Vestido de fiesta rojo confeccionado a medida"
               class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
               loading="lazy"
               width="400"
               height="500"
             />
           </div>
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Flamenca Tradicional</h3>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Vestidos de Fiesta</h3>
           <p class="text-gray-600 text-sm">
-            Diseño tradicional andaluz con estampado negro y turquesa, volantes y mantoncillo. 
-            Ideal para feria y eventos especiales.
+            Diseños elegantes para bodas, galas y eventos especiales. 
+            Cada vestido es único y se adapta perfectamente a tu figura.
           </p>
         </div>
 
-        <!-- Traje 2 -->
+        <!-- Vestidos de ceremonia -->
         <div class="group cursor-pointer">
           <div class="aspect-w-3 aspect-h-4 overflow-hidden rounded-lg mb-4">
             <img
-              src="/images/new_images/Vestido de flamenca floral con volantes rojos, verdes y beige – estilo alegre y colorido para feria.jpg"
-              alt="Traje de flamenca floral con volantes coloridos"
+              src="/images/new_images/Vestido largo fucsia con espalda descubierta y capa fluida – invitada de boda.jpg"
+              alt="Vestido largo fucsia para invitada de boda"
               class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
               loading="lazy"
               width="400"
               height="500"
             />
           </div>
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Flamenca Estampado Floral</h3>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Vestidos de Ceremonia</h3>
           <p class="text-gray-600 text-sm">
-            Diseño alegre y colorido con volantes en rojos, verdes y beige. 
-            Perfecto para destacar en cualquier feria.
+            Perfectos para invitadas de boda, comuniones y celebraciones. 
+            Elegancia y distinción en cada detalle.
           </p>
         </div>
 
-        <!-- Traje 3 -->
+        <!-- Ropa infantil -->
         <div class="group cursor-pointer">
           <div class="aspect-w-3 aspect-h-4 overflow-hidden rounded-lg mb-4">
             <img
-              src="/images/new_images/Vestidos de flamenca infantiles rosa con lunares blancos y volantes – conjuntos para feria.jpg"
-              alt="Trajes de flamenca infantiles rosa con lunares blancos"
+              src="/images/new_images/Vestido de ceremonia infantil azul con top de topos y falda de tablas – estilo damita de honor.jpg"
+              alt="Vestido de ceremonia infantil azul"
               class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
               loading="lazy"
               width="400"
               height="500"
             />
           </div>
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Flamenca Infantil</h3>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Ropa Infantil</h3>
           <p class="text-gray-600 text-sm">
-            Diseños especiales para las más pequeñas en rosa con lunares blancos. Comodidad y belleza 
-            adaptadas a los movimientos de las niñas.
+            Prendas especiales para los más pequeños. Comodidad, calidad 
+            y diseños que les hacen sentir únicos.
           </p>
         </div>
-      </div>
-
-      <div class="text-center">
-        <a href="/galeria/" class="btn btn-secondary">
-          Ver toda nuestra galería
-        </a>
       </div>
     </div>
   </section>
@@ -163,11 +154,11 @@ const serviceSchema = {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-          Proceso Artesanal de Confección
+          Nuestro Proceso de Confección
         </h2>
         <p class="text-lg text-gray-600 max-w-3xl mx-auto">
           Desde la primera consulta hasta la entrega final, cada paso está cuidadosamente 
-          planificado para crear el traje perfecto para ti.
+          planificado para crear la prenda perfecta para ti.
         </p>
       </div>
 
@@ -177,7 +168,7 @@ const serviceSchema = {
           <div class="lg:w-1/2">
             <div class="flex items-center mb-4">
               <div class="w-12 h-12 bg-burgundy-700 text-white rounded-full flex items-center justify-center text-xl font-bold mr-4">1</div>
-              <h3 class="text-2xl font-bold text-gray-900">Consulta y Diseño</h3>
+              <h3 class="text-2xl font-bold text-gray-900">Consulta Personalizada</h3>
             </div>
             <p class="text-gray-700 mb-6 leading-relaxed">
               Nos reunimos contigo para entender tu visión, estilo y ocasión de uso. 
@@ -188,13 +179,13 @@ const serviceSchema = {
                 <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                 </svg>
-                Asesoramiento sobre colores y estilos
+                Asesoramiento sobre estilos y colores
               </li>
               <li class="flex items-start">
                 <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                 </svg>
-                Selección de tejidos y complementos
+                Selección de tejidos y materiales
               </li>
               <li class="flex items-start">
                 <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -206,8 +197,8 @@ const serviceSchema = {
           </div>
           <div class="lg:w-1/2">
             <img
-              src="/images/taller-costura-ajuste-falda-cordoba.jpg"
-              alt="Proceso de diseño y consulta para trajes de flamenca"
+              src="/images/new_images/Proceso de traje a medida.jpg"
+              alt="Proceso de diseño y consulta para prendas a medida"
               class="rounded-lg shadow-lg w-full h-auto object-cover"
               loading="lazy"
               width="500"
@@ -249,14 +240,14 @@ const serviceSchema = {
             </ul>
           </div>
           <div class="lg:w-1/2">
-            <div class="bg-burgundy-50 border border-burgundy-200 rounded-lg p-6">
-              <h4 class="font-semibold text-burgundy-900 mb-3">💡 ¿Sabías que...?</h4>
-              <p class="text-burgundy-800 text-sm">
-                Un traje de flamenca bien ajustado puede requerir hasta 25 medidas diferentes. 
-                Desde el contorno del cuello hasta la caída exacta de cada volante, 
-                cada detalle influye en el resultado final.
-              </p>
-            </div>
+            <img
+              src="/images/new_images/Montaje de traje.jpg"
+              alt="Proceso de toma de medidas y montaje"
+              class="rounded-lg shadow-lg w-full h-auto object-cover"
+              loading="lazy"
+              width="500"
+              height="300"
+            />
           </div>
         </div>
 
@@ -268,24 +259,24 @@ const serviceSchema = {
               <h3 class="text-2xl font-bold text-gray-900">Confección Artesanal</h3>
             </div>
             <p class="text-gray-700 mb-6 leading-relaxed">
-              Comenzamos la confección artesanal de tu traje. Cada costura, cada volante, 
-              cada detalle se realiza a mano con la máxima precisión y cuidado.
+              Comenzamos la confección artesanal de tu prenda. Cada costura, cada detalle, 
+              se realiza con la máxima precisión y cuidado por nuestras expertas costureras.
             </p>
             <div class="grid grid-cols-2 gap-4 text-center">
               <div class="bg-gray-50 p-4 rounded-lg">
-                <div class="text-2xl font-bold text-burgundy-700 mb-1">40-60h</div>
+                <div class="text-2xl font-bold text-burgundy-700 mb-1">30-50h</div>
                 <div class="text-sm text-gray-600">Horas de trabajo</div>
               </div>
               <div class="bg-gray-50 p-4 rounded-lg">
-                <div class="text-2xl font-bold text-burgundy-700 mb-1">4-6</div>
+                <div class="text-2xl font-bold text-burgundy-700 mb-1">3-5</div>
                 <div class="text-sm text-gray-600">Semanas de confección</div>
               </div>
             </div>
           </div>
           <div class="lg:w-1/2">
             <img
-              src="/images/exposicion-vestidos-fiesta-alta-costura-cordoba.jpg"
-              alt="Proceso de confección artesanal de trajes de flamenca"
+              src="/images/new_images/Vestido asimétrico rojo con espalda abierta – elegante para boda.jpg"
+              alt="Proceso de confección artesanal de vestidos"
               class="rounded-lg shadow-lg w-full h-auto object-cover"
               loading="lazy"
               width="500"
@@ -297,16 +288,15 @@ const serviceSchema = {
     </div>
   </section>
 
-
   <!-- CTA -->
   <section class="py-20 bg-burgundy-700 text-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl lg:text-4xl font-bold mb-6">
-        ¿Lista para tu Traje de Flamenca Perfecto?
+        ¿Lista para tu Prenda Perfecta?
       </h2>
       <p class="text-xl mb-8 opacity-90">
-        Cada traje que creamos es único, como la mujer que lo llevará. 
-        Convierte tu sueño flamenco en realidad con nuestro equipo de artesanas expertas.
+        Cada prenda que creamos es única, como la mujer que la llevará. 
+        Convierte tu sueño en realidad con nuestro equipo de expertas costureras.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="/contacto/" class="bg-white text-burgundy-700 hover:bg-gray-100 px-8 py-3 rounded-md font-medium transition-colors duration-200">

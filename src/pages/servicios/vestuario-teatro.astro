@@ -1,0 +1,489 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const title = 'Vestuario de Teatro y Espectáculos en Córdoba - Puntadas y Punto';
+const description = 'Confección de vestuario teatral y para espectáculos en Córdoba. Teatro clásico, contemporáneo, danza y musicales. Estudiamos cada proyecto según las necesidades de la compañía.';
+
+const breadcrumbs = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Servicios', href: '/servicios/' },
+  { label: 'Vestuario teatro' }
+];
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Vestuario de teatro y espectáculos",
+  "description": "Confección de vestuario escénico para teatro, danza y espectáculos",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Puntadas y Punto",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Glorieta de los Países Bálticos 1, Oficina 11",
+      "addressLocality": "Córdoba",
+      "postalCode": "14014",
+      "addressCountry": "ES"
+    }
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Córdoba",
+    "addressCountry": "ES"
+  },
+  "serviceType": "Vestuario teatral y escénico"
+};
+---
+
+<Layout title={title} description={description} schema={serviceSchema}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="py-16 bg-gradient-to-br from-cream-100 to-cream-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <span class="text-burgundy-700">Vestuario de Teatro</span> y Espectáculos
+          </h1>
+          <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+            Confección de vestuario de teatro y espectáculos. Estudiamos el tipo de vestuario escénico 
+            y asistimos todas las necesidades en función si la compañía lo solicita. 
+            Más de 30 años de experiencia en el sector.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#especialidades" class="btn btn-primary">
+              Ver especialidades
+            </a>
+            <a href="/contacto/" class="btn btn-secondary">
+              Consultar proyecto
+            </a>
+          </div>
+        </div>
+        <div>
+          <img
+            src="/images/new_images/Capa de rey mago en terciopelo azul y brocado dorado con broche y pluma – traje de cabalgata.jpg"
+            alt="Vestuario teatral confeccionado en Puntadas y Punto, Córdoba"
+            class="rounded-lg shadow-xl w-full h-auto object-cover"
+            loading="eager"
+            width="600"
+            height="400"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filosofía -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          El Arte del Vestuario Escénico
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          El vestuario teatral es mucho más que ropa: es parte integral de la narrativa, 
+          ayuda a definir personajes y transporta al público a diferentes épocas y mundos.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Narrativa -->
+        <div class="text-center">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-purple-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Narrativa Visual</h3>
+          <p class="text-gray-600 text-sm">
+            Cada prenda cuenta una historia y ayuda a construir 
+            la atmósfera y el mundo de la obra teatral.
+          </p>
+        </div>
+
+        <!-- Funcionalidad -->
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Funcionalidad Escénica</h3>
+          <p class="text-gray-600 text-sm">
+            Diseñamos pensando en los movimientos escénicos, 
+            cambios rápidos y durabilidad durante las representaciones.
+          </p>
+        </div>
+
+        <!-- Autenticidad -->
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Autenticidad Histórica</h3>
+          <p class="text-gray-600 text-sm">
+            Investigamos cada época y estilo para lograr 
+            la máxima autenticidad histórica y artística.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Especialidades -->
+  <section id="especialidades" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Nuestras Especialidades
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Trabajamos con diferentes géneros teatrales y tipos de espectáculos, 
+          adaptándonos a las necesidades específicas de cada producción.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Teatro Clásico -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-amber-500 to-amber-600 px-6 py-4">
+            <h3 class="text-xl font-bold text-white">Teatro Clásico</h3>
+            <p class="text-amber-100">Tradición y elegancia atemporal</p>
+          </div>
+          <div class="p-6">
+            <h4 class="font-semibold text-gray-900 mb-3">Especialidades:</h4>
+            <ul class="space-y-2 text-gray-600 mb-6">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-amber-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Teatro griego y romano
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-amber-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Shakespeare y teatro isabelino
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-amber-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Siglo de Oro español
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-amber-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Teatro neoclásico
+              </li>
+            </ul>
+            <p class="text-sm text-gray-600">
+              Recreamos fielmente los períodos históricos con investigación documental 
+              y atención a los detalles de época.
+            </p>
+          </div>
+        </div>
+
+        <!-- Teatro Contemporáneo -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-4">
+            <h3 class="text-xl font-bold text-white">Teatro Contemporáneo</h3>
+            <p class="text-blue-100">Innovación y expresión moderna</p>
+          </div>
+          <div class="p-6">
+            <h4 class="font-semibold text-gray-900 mb-3">Especialidades:</h4>
+            <ul class="space-y-2 text-gray-600 mb-6">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-blue-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Teatro experimental
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-blue-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Drama psicológico
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-blue-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Teatro físico
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-blue-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Performance art
+              </li>
+            </ul>
+            <p class="text-sm text-gray-600">
+              Exploramos nuevas formas de expresión visual adaptándonos 
+              a las propuestas más vanguardistas.
+            </p>
+          </div>
+        </div>
+
+        <!-- Danza -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-pink-500 to-pink-600 px-6 py-4">
+            <h3 class="text-xl font-bold text-white">Danza</h3>
+            <p class="text-pink-100">Movimiento y expresión corporal</p>
+          </div>
+          <div class="p-6">
+            <h4 class="font-semibold text-gray-900 mb-3">Especialidades:</h4>
+            <ul class="space-y-2 text-gray-600 mb-6">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-pink-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Ballet clásico
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-pink-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Danza contemporánea
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-pink-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Flamenco y danzas españolas
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-pink-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Danzas folclóricas
+              </li>
+            </ul>
+            <p class="text-sm text-gray-600">
+              Diseñamos vestuario que permite total libertad de movimiento 
+              sin comprometer la estética del espectáculo.
+            </p>
+          </div>
+        </div>
+
+        <!-- Musicales -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-purple-500 to-purple-600 px-6 py-4">
+            <h3 class="text-xl font-bold text-white">Musicales</h3>
+            <p class="text-purple-100">Espectáculo total y versatilidad</p>
+          </div>
+          <div class="p-6">
+            <h4 class="font-semibold text-gray-900 mb-3">Especialidades:</h4>
+            <ul class="space-y-2 text-gray-600 mb-6">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-purple-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Broadway y West End
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-purple-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Zarzuela española
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-purple-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Ópera y opereta
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-purple-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Musicales infantiles
+              </li>
+            </ul>
+            <p class="text-sm text-gray-600">
+              Combinamos espectacularidad visual con funcionalidad para 
+              cambios rápidos y números musicales complejos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso de trabajo -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Nuestro Proceso de Trabajo
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Trabajamos estrechamente con directores, diseñadores y compañías teatrales 
+          para crear vestuario que sirva perfectamente a la visión artística.
+        </p>
+      </div>
+
+      <div class="space-y-12">
+        <!-- Paso 1 -->
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-1/2">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-burgundy-700 text-white rounded-full flex items-center justify-center text-xl font-bold mr-4">1</div>
+              <h3 class="text-2xl font-bold text-gray-900">Análisis del Proyecto</h3>
+            </div>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              Estudiamos el guión, la propuesta escénica, el presupuesto y los requerimientos técnicos. 
+              Analizamos cada personaje y su evolución a lo largo de la obra.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Lectura y análisis del guión</li>
+              <li>• Reuniones con el equipo artístico</li>
+              <li>• Definición del concepto visual</li>
+              <li>• Estudio de viabilidad técnica</li>
+            </ul>
+          </div>
+          <div class="lg:w-1/2">
+            <div class="bg-purple-50 rounded-lg p-6">
+              <h4 class="font-semibold text-purple-900 mb-3">🎭 Colaboración Artística</h4>
+              <p class="text-purple-800 text-sm">
+                Trabajamos como parte del equipo creativo, aportando nuestra experiencia 
+                técnica al servicio de la visión artística del director y diseñador.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+          <div class="lg:w-1/2">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-burgundy-700 text-white rounded-full flex items-center justify-center text-xl font-bold mr-4">2</div>
+              <h3 class="text-2xl font-bold text-gray-900">Diseño y Planificación</h3>
+            </div>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              Desarrollamos bocetos, seleccionamos materiales y planificamos la producción. 
+              Consideramos aspectos como cambios rápidos, durabilidad y mantenimiento.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Bocetos y diseños detallados</li>
+              <li>• Selección de tejidos y materiales</li>
+              <li>• Planificación de la producción</li>
+              <li>• Presupuesto detallado</li>
+            </ul>
+          </div>
+          <div class="lg:w-1/2">
+            <img
+              src="/images/new_images/Body nude con tul transparente y bordado dorado de pedrería – prenda elegante para gala o danza.jpg"
+              alt="Diseño de vestuario para danza"
+              class="rounded-lg shadow-lg w-full h-auto object-cover"
+              loading="lazy"
+              width="500"
+              height="300"
+            />
+          </div>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-1/2">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-burgundy-700 text-white rounded-full flex items-center justify-center text-xl font-bold mr-4">3</div>
+              <h3 class="text-2xl font-bold text-gray-900">Confección y Pruebas</h3>
+            </div>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              Confeccionamos las prendas con técnicas especializadas para teatro. 
+              Realizamos pruebas con los actores para asegurar comodidad y funcionalidad.
+            </p>
+            <div class="grid grid-cols-2 gap-4 text-center">
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="text-2xl font-bold text-burgundy-700 mb-1">100+</div>
+                <div class="text-sm text-gray-600">Horas por producción</div>
+              </div>
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="text-2xl font-bold text-burgundy-700 mb-1">3-8</div>
+                <div class="text-sm text-gray-600">Semanas de trabajo</div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/2">
+            <div class="bg-green-50 rounded-lg p-6">
+              <h4 class="font-semibold text-green-900 mb-3">⚡ Técnicas Especializadas</h4>
+              <p class="text-green-800 text-sm">
+                Utilizamos técnicas específicas para teatro: costuras reforzadas, 
+                cierres rápidos, materiales resistentes y acabados que resisten 
+                el uso intensivo y las luces del escenario.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios adicionales -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Servicios Complementarios
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Ofrecemos servicios adicionales para cubrir todas las necesidades 
+          de vestuario de tu producción teatral.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Mantenimiento y Reparaciones</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Servicio de mantenimiento durante la temporada teatral, 
+            reparaciones urgentes y limpieza especializada.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Alquiler de Vestuario</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Disponemos de un amplio catálogo de vestuario histórico 
+            y temático disponible para alquiler.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Asesoramiento Técnico</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Consultoría en vestuario teatral, formación para equipos 
+            y asesoramiento en producciones complejas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-burgundy-700 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+        ¿Tienes un Proyecto Teatral?
+      </h2>
+      <p class="text-xl mb-8 opacity-90">
+        Estudiamos el tipo de vestuario escénico y asistimos todas las necesidades 
+        en función si la compañía lo solicita. Más de 30 años de experiencia nos avalan.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contacto/" class="bg-white text-burgundy-700 hover:bg-gray-100 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Consultar proyecto
+        </a>
+        <a href="tel:+34699869097" class="border-2 border-white text-white hover:bg-white hover:text-burgundy-700 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Llamar ahora
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

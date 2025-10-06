@@ -1,0 +1,423 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const title = 'Disfraces a Medida en Córdoba - Puntadas y Punto';
+const description = 'Disfraces únicos y personalizados en Córdoba. Vestuario para carnaval, halloween, fiestas fin de curso, comparsas y eventos temáticos. Presupuesto sin compromiso.';
+
+const breadcrumbs = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Servicios', href: '/servicios/' },
+  { label: 'Disfraces a medida' }
+];
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Disfraces a medida",
+  "description": "Confección de disfraces únicos para carnaval, halloween y eventos temáticos",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Puntadas y Punto",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Glorieta de los Países Bálticos 1, Oficina 11",
+      "addressLocality": "Córdoba",
+      "postalCode": "14014",
+      "addressCountry": "ES"
+    }
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Córdoba",
+    "addressCountry": "ES"
+  },
+  "serviceType": "Confección de disfraces personalizados"
+};
+---
+
+<Layout title={title} description={description} schema={serviceSchema}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="py-16 bg-gradient-to-br from-cream-100 to-cream-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <span class="text-burgundy-700">Disfraces a Medida</span> en Córdoba
+          </h1>
+          <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+            Pide tu vestuario para carnaval, halloween, fiesta fin de curso, comparsas. 
+            Presupuesto sin compromiso. Eventos temáticos. Cada disfraz es único y 
+            está hecho especialmente para ti.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#ocasiones" class="btn btn-primary">
+              Ver ocasiones
+            </a>
+            <a href="/contacto/" class="btn btn-secondary">
+              Pedir presupuesto
+            </a>
+          </div>
+        </div>
+        <div>
+          <img
+            src="/images/new_images/Disfraz de caballero templario con túnica blanca, cruz bordada y capa negra – traje medieval artesanal.jpg"
+            alt="Disfraz de caballero templario confeccionado a medida en Puntadas y Punto, Córdoba"
+            class="rounded-lg shadow-xl w-full h-auto object-cover"
+            loading="eager"
+            width="600"
+            height="400"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filosofía -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Disfraces Únicos para Momentos Especiales
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Creemos que cada disfraz debe ser tan único como la persona que lo lleva. 
+          Por eso confeccionamos cada pieza a medida, cuidando cada detalle para que te sientas especial.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Originalidad -->
+        <div class="text-center">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-purple-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">100% Original</h3>
+          <p class="text-gray-600 text-sm">
+            Cada disfraz es único y original. No encontrarás otro igual 
+            porque lo diseñamos específicamente para ti.
+          </p>
+        </div>
+
+        <!-- Calidad -->
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Calidad Artesanal</h3>
+          <p class="text-gray-600 text-sm">
+            Utilizamos materiales de calidad y técnicas artesanales 
+            para que tu disfraz sea resistente y duradero.
+          </p>
+        </div>
+
+        <!-- Comodidad -->
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Máxima Comodidad</h3>
+          <p class="text-gray-600 text-sm">
+            Diseñamos pensando en tu comodidad para que puedas 
+            disfrutar del evento sin preocupaciones.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ocasiones -->
+  <section id="ocasiones" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Disfraces para Cada Ocasión
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Desde carnaval hasta eventos temáticos, creamos el disfraz perfecto 
+          para cada celebración y momento especial.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <!-- Carnaval -->
+        <div class="group cursor-pointer">
+          <div class="aspect-w-3 aspect-h-4 overflow-hidden rounded-lg mb-4">
+            <img
+              src="/images/new_images/Disfraz original de colores con cuerpo naranja y detalles en morado – hecho a mano.jpg"
+              alt="Disfraz original de carnaval hecho a mano"
+              class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              width="400"
+              height="500"
+            />
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Carnaval</h3>
+          <p class="text-gray-600 text-sm">
+            Disfraces únicos y coloridos para destacar en carnaval. 
+            Desde diseños tradicionales hasta creaciones originales.
+          </p>
+        </div>
+
+        <!-- Halloween -->
+        <div class="group cursor-pointer">
+          <div class="aspect-w-3 aspect-h-4 overflow-hidden rounded-lg mb-4">
+            <img
+              src="/images/new_images/Disfraz de caballero templario con túnica blanca, cruz bordada y capa negra – traje medieval artesanal.jpg"
+              alt="Disfraz medieval para halloween"
+              class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              width="400"
+              height="500"
+            />
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Halloween</h3>
+          <p class="text-gray-600 text-sm">
+            Disfraces terroríficos, medievales y de época para una 
+            noche de halloween inolvidable.
+          </p>
+        </div>
+
+        <!-- Infantil -->
+        <div class="group cursor-pointer">
+          <div class="aspect-w-3 aspect-h-4 overflow-hidden rounded-lg mb-4">
+            <img
+              src="/images/new_images/Disfraz infantil de pirata clásico con casaca bordada, chaleco a rayas y sombrero tricorne.jpg"
+              alt="Disfraz infantil de pirata"
+              class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              width="400"
+              height="500"
+            />
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Fiestas Fin de Curso</h3>
+          <p class="text-gray-600 text-sm">
+            Disfraces especiales para los más pequeños. Comodidad 
+            y diversión para sus celebraciones escolares.
+          </p>
+        </div>
+
+        <!-- Comparsas -->
+        <div class="group cursor-pointer">
+          <div class="aspect-w-3 aspect-h-4 overflow-hidden rounded-lg mb-4">
+            <img
+              src="/images/new_images/Capa de rey mago en terciopelo azul y brocado dorado con broche y pluma – traje de cabalgata.jpg"
+              alt="Traje para comparsa de reyes magos"
+              class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              width="400"
+              height="500"
+            />
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Comparsas</h3>
+          <p class="text-gray-600 text-sm">
+            Vestuario para comparsas y cabalgatas. Diseños que 
+            destacan en desfiles y celebraciones populares.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tipos de disfraces -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Especialidades en Disfraces
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Tenemos experiencia en todo tipo de disfraces, desde los más clásicos 
+          hasta los más originales y creativos.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Históricos -->
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Disfraces Históricos</h3>
+          <ul class="space-y-2 text-gray-600 mb-4">
+            <li>• Época medieval</li>
+            <li>• Renacimiento</li>
+            <li>• Siglo XVIII y XIX</li>
+            <li>• Años 20, 50, 60...</li>
+          </ul>
+          <p class="text-sm text-gray-500">
+            Recreamos fielmente cada época con atención al detalle histórico.
+          </p>
+        </div>
+
+        <!-- Fantasía -->
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Fantasía y Ficción</h3>
+          <ul class="space-y-2 text-gray-600 mb-4">
+            <li>• Personajes de cuentos</li>
+            <li>• Superhéroes</li>
+            <li>• Criaturas fantásticas</li>
+            <li>• Personajes de películas</li>
+          </ul>
+          <p class="text-sm text-gray-500">
+            Damos vida a tus personajes favoritos con creatividad y originalidad.
+          </p>
+        </div>
+
+        <!-- Profesiones -->
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Profesiones y Oficios</h3>
+          <ul class="space-y-2 text-gray-600 mb-4">
+            <li>• Médicos y enfermeras</li>
+            <li>• Policías y bomberos</li>
+            <li>• Chefs y cocineros</li>
+            <li>• Oficios tradicionales</li>
+          </ul>
+          <p class="text-sm text-gray-500">
+            Disfraces realistas de profesiones con todos los detalles auténticos.
+          </p>
+        </div>
+
+        <!-- Animales -->
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Animales</h3>
+          <ul class="space-y-2 text-gray-600 mb-4">
+            <li>• Animales domésticos</li>
+            <li>• Animales salvajes</li>
+            <li>• Insectos y mariposas</li>
+            <li>• Criaturas marinas</li>
+          </ul>
+          <p class="text-sm text-gray-500">
+            Disfraces de animales cómodos y realistas para todas las edades.
+          </p>
+        </div>
+
+        <!-- Temáticos -->
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Eventos Temáticos</h3>
+          <ul class="space-y-2 text-gray-600 mb-4">
+            <li>• Fiestas de disfraces</li>
+            <li>• Eventos corporativos</li>
+            <li>• Celebraciones especiales</li>
+            <li>• Representaciones teatrales</li>
+          </ul>
+          <p class="text-sm text-gray-500">
+            Adaptamos cada disfraz al tema específico de tu evento.
+          </p>
+        </div>
+
+        <!-- Grupos -->
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Disfraces de Grupo</h3>
+          <ul class="space-y-2 text-gray-600 mb-4">
+            <li>• Familias coordinadas</li>
+            <li>• Grupos de amigos</li>
+            <li>• Equipos y comparsas</li>
+            <li>• Eventos escolares</li>
+          </ul>
+          <p class="text-sm text-gray-500">
+            Coordinamos disfraces para grupos manteniendo la coherencia del conjunto.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Cómo Creamos tu Disfraz Perfecto
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Desde la idea inicial hasta la entrega final, te acompañamos 
+          en todo el proceso de creación de tu disfraz único.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <div class="flex items-start space-x-4">
+          <div class="w-8 h-8 bg-burgundy-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">1</div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Consulta de ideas</h3>
+            <p class="text-gray-700">
+              Nos cuentas tu idea, el evento, el presupuesto y cualquier detalle especial. 
+              Te asesoramos sobre las mejores opciones para tu disfraz.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <div class="w-8 h-8 bg-burgundy-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">2</div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Diseño y presupuesto</h3>
+            <p class="text-gray-700">
+              Creamos el diseño del disfraz y te damos un presupuesto detallado sin compromiso. 
+              Ajustamos el proyecto a tus necesidades y presupuesto.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <div class="w-8 h-8 bg-burgundy-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">3</div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Toma de medidas</h3>
+            <p class="text-gray-700">
+              Tomamos las medidas necesarias para que el disfraz se ajuste perfectamente. 
+              Para disfraces infantiles, consideramos el crecimiento.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <div class="w-8 h-8 bg-burgundy-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">4</div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Confección artesanal</h3>
+            <p class="text-gray-700">
+              Confeccionamos tu disfraz con materiales de calidad y técnicas artesanales. 
+              Cuidamos cada detalle para un resultado espectacular.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <div class="w-8 h-8 bg-burgundy-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">5</div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Entrega y asesoramiento</h3>
+            <p class="text-gray-700">
+              Te entregamos tu disfraz completo con todos los complementos y te damos 
+              consejos para su cuidado y uso.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-burgundy-700 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+        ¿Listo para tu Disfraz Único?
+      </h2>
+      <p class="text-xl mb-8 opacity-90">
+        Cuéntanos tu idea y la convertiremos en el disfraz perfecto. 
+        Presupuesto sin compromiso y asesoramiento personalizado.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contacto/" class="bg-white text-burgundy-700 hover:bg-gray-100 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Pedir presupuesto
+        </a>
+        <a href="tel:+34699869097" class="border-2 border-white text-white hover:bg-white hover:text-burgundy-700 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Llamar ahora
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,362 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const title = 'Patronaje a Medida en Córdoba - Puntadas y Punto';
+const description = 'Servicio de patronaje personalizado en Córdoba. Creación de patrones a medida adaptados a tus medidas exactas. Base fundamental para una confección perfecta.';
+
+const breadcrumbs = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Servicios', href: '/servicios/' },
+  { label: 'Patronaje a medida' }
+];
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Patronaje a medida",
+  "description": "Creación de patrones personalizados adaptados a medidas exactas",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Puntadas y Punto",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Glorieta de los Países Bálticos 1, Oficina 11",
+      "addressLocality": "Córdoba",
+      "postalCode": "14014",
+      "addressCountry": "ES"
+    }
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Córdoba",
+    "addressCountry": "ES"
+  },
+  "serviceType": "Patronaje personalizado"
+};
+---
+
+<Layout title={title} description={description} schema={serviceSchema}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="py-16 bg-gradient-to-br from-cream-100 to-cream-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <span class="text-burgundy-700">Patronaje a Medida</span> en Córdoba
+          </h1>
+          <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+            Creación de patrones personalizados adaptados a medidas exactas. 
+            Base fundamental para una confección perfecta. Más de 30 años de experiencia 
+            en patronaje tradicional y moderno.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#tipos" class="btn btn-primary">
+              Ver servicios
+            </a>
+            <a href="/contacto/" class="btn btn-secondary">
+              Solicitar patrón
+            </a>
+          </div>
+        </div>
+        <div>
+          <img
+            src="/images/new_images/Proceso de traje a medida.jpg"
+            alt="Proceso de patronaje a medida en Puntadas y Punto, Córdoba"
+            class="rounded-lg shadow-xl w-full h-auto object-cover"
+            loading="eager"
+            width="600"
+            height="400"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Importancia del patronaje -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          La Base de una Confección Perfecta
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          El patronaje es el alma de cualquier prenda bien confeccionada. 
+          Un patrón preciso es la diferencia entre una prenda que sienta bien y una que es perfecta.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Precisión -->
+        <div class="text-center">
+          <div class="w-16 h-16 bg-burgundy-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-burgundy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Precisión Milimétrica</h3>
+          <p class="text-gray-600 text-sm">
+            Cada medida se toma con precisión profesional para crear patrones que se adapten perfectamente a tu cuerpo.
+          </p>
+        </div>
+
+        <!-- Personalización -->
+        <div class="text-center">
+          <div class="w-16 h-16 bg-burgundy-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-burgundy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">100% Personalizado</h3>
+          <p class="text-gray-600 text-sm">
+            No usamos tallas estándar. Cada patrón se crea específicamente para tu morfología única.
+          </p>
+        </div>
+
+        <!-- Experiencia -->
+        <div class="text-center">
+          <div class="w-16 h-16 bg-burgundy-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-burgundy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">+30 Años Experiencia</h3>
+          <p class="text-gray-600 text-sm">
+            Décadas de experiencia en patronaje tradicional y técnicas modernas de confección.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tipos de patronaje -->
+  <section id="tipos" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Servicios de Patronaje
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Ofrecemos diferentes servicios de patronaje adaptados a tus necesidades, 
+          desde patrones base hasta modificaciones complejas.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Patrones base -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-burgundy-500 to-burgundy-600 px-6 py-4">
+            <h3 class="text-xl font-bold text-white">Patrones Base Personalizados</h3>
+            <p class="text-burgundy-100">La base perfecta para cualquier prenda</p>
+          </div>
+          <div class="p-6">
+            <h4 class="font-semibold text-gray-900 mb-3">Incluye:</h4>
+            <ul class="space-y-2 text-gray-600 mb-6">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Patrón de cuerpo base (corpiño)
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Patrón de falda base
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Patrón de manga básica
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Instrucciones de uso y modificación
+              </li>
+            </ul>
+            
+            <div class="text-center">
+              <a href="/contacto/" class="btn btn-primary">
+                Solicitar información
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Escalado de tallas -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-burgundy-600 to-burgundy-700 px-6 py-4">
+            <h3 class="text-xl font-bold text-white">Escalado de Tallas</h3>
+            <p class="text-burgundy-100">Adaptación a diferentes tallas</p>
+          </div>
+          <div class="p-6">
+            <h4 class="font-semibold text-gray-900 mb-3">Perfecto para:</h4>
+            <ul class="space-y-2 text-gray-600 mb-6">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Pequeñas empresas de confección
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Diseñadores independientes
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Producción en serie limitada
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-burgundy-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Talleres de costura
+              </li>
+            </ul>
+            
+            <div class="text-center">
+              <a href="/contacto/" class="btn btn-primary">
+                Consultar proyecto
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Proceso de Creación de Patrones
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Cada patrón se crea siguiendo un proceso meticuloso que garantiza 
+          la precisión y calidad del resultado final.
+        </p>
+      </div>
+
+      <div class="space-y-12">
+        <!-- Paso 1 -->
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-1/2">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-burgundy-700 text-white rounded-full flex items-center justify-center text-xl font-bold mr-4">1</div>
+              <h3 class="text-2xl font-bold text-gray-900">Análisis de Medidas</h3>
+            </div>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              Estudiamos cuidadosamente todas las medidas corporales, analizando proporciones, 
+              postura y características específicas de cada persona.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Medidas principales y secundarias</li>
+              <li>• Análisis de proporciones</li>
+              <li>• Estudio de la postura natural</li>
+              <li>• Identificación de particularidades</li>
+            </ul>
+          </div>
+          <div class="lg:w-1/2">
+            <div class="bg-cream-100 rounded-lg p-6">
+              <h4 class="font-semibold text-gray-900 mb-3">💡 ¿Sabías que...?</h4>
+              <p class="text-gray-700 text-sm">
+                Cada persona tiene más de 40 medidas diferentes que pueden influir en el ajuste 
+                de una prenda. Nosotros tomamos las más relevantes según el tipo de patrón a crear.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+          <div class="lg:w-1/2">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-burgundy-700 text-white rounded-full flex items-center justify-center text-xl font-bold mr-4">2</div>
+              <h3 class="text-2xl font-bold text-gray-900">Trazado del Patrón</h3>
+            </div>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              Utilizando técnicas tradicionales y modernas, trazamos el patrón base 
+              adaptándolo específicamente a las medidas y características analizadas.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Trazado manual de precisión</li>
+              <li>• Aplicación de técnicas tradicionales</li>
+              <li>• Verificación de medidas</li>
+              <li>• Ajustes específicos</li>
+            </ul>
+          </div>
+          <div class="lg:w-1/2">
+            <div class="bg-burgundy-50 rounded-lg p-6">
+              <h4 class="font-semibold text-burgundy-900 mb-3">🎯 Precisión Garantizada</h4>
+              <p class="text-burgundy-800 text-sm">
+                Nuestros patrones tienen una precisión de ±2mm, lo que garantiza 
+                un ajuste perfecto en la prenda final.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-1/2">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-burgundy-700 text-white rounded-full flex items-center justify-center text-xl font-bold mr-4">3</div>
+              <h3 class="text-2xl font-bold text-gray-900">Prueba y Ajuste</h3>
+            </div>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              Realizamos una prueba del patrón con tela de prueba para verificar 
+              el ajuste y realizar los ajustes finales necesarios.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Confección de toile (prenda de prueba)</li>
+              <li>• Verificación del ajuste</li>
+              <li>• Correcciones necesarias</li>
+              <li>• Patrón definitivo</li>
+            </ul>
+          </div>
+          <div class="lg:w-1/2">
+            <img
+              src="/images/new_images/Clase de costura práctica – confección de capota infantil artesanal.jpg"
+              alt="Proceso de prueba y ajuste de patrones"
+              class="rounded-lg shadow-lg w-full h-auto object-cover"
+              loading="lazy"
+              width="500"
+              height="300"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-burgundy-700 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+        ¿Necesitas un Patrón Personalizado?
+      </h2>
+      <p class="text-xl mb-8 opacity-90">
+        Creamos patrones únicos adaptados a tus medidas exactas. 
+        La base perfecta para prendas que sientan como una segunda piel.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contacto/" class="bg-white text-burgundy-700 hover:bg-gray-100 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Solicitar patrón
+        </a>
+        <a href="tel:+34699869097" class="border-2 border-white text-white hover:bg-white hover:text-burgundy-700 px-8 py-3 rounded-md font-medium transition-colors duration-200">
+          Llamar ahora
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
