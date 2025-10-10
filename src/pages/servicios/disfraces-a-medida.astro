@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
 const title = 'Disfraces a Medida en Córdoba - Puntadas y Punto';
-const description = 'Disfraces únicos y personalizados en Córdoba. Vestuario para carnaval, halloween, fiestas fin de curso, comparsas y eventos temáticos. Presupuesto sin compromiso.';
+const description = 'Disfraces únicos y personalizados en Córdoba. Vestuario para carnaval, fiestas fin de curso, comparsas y eventos temáticos. Presupuesto sin compromiso.';
 
 const breadcrumbs = [
   { label: 'Inicio', href: '/' },
@@ -15,7 +15,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Disfraces a medida",
-  "description": "Confección de disfraces únicos para carnaval, halloween y eventos temáticos",
+  "description": "Confección de disfraces únicos para carnaval y eventos temáticos",
   "provider": {
     "@type": "LocalBusiness",
     "name": "Puntadas y Punto",
@@ -48,7 +48,7 @@ const serviceSchema = {
             <span class="text-burgundy-700">Disfraces a Medida</span> en Córdoba
           </h1>
           <p class="text-xl text-gray-700 mb-8 leading-relaxed">
-            Pide tu vestuario para carnaval, halloween, fiesta fin de curso, comparsas. 
+            Pide tu vestuario para carnaval, fiesta fin de curso, comparsas. 
             Presupuesto sin compromiso. Eventos temáticos. Cada disfraz es único y 
             está hecho especialmente para ti.
           </p>
@@ -148,7 +148,7 @@ const serviceSchema = {
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
         <!-- Carnaval -->
         <div class="group cursor-pointer">
           <div class="aspect-w-3 aspect-h-4 overflow-hidden rounded-lg mb-4">
@@ -165,25 +165,6 @@ const serviceSchema = {
           <p class="text-gray-600 text-sm">
             Disfraces únicos y coloridos para destacar en carnaval. 
             Desde diseños tradicionales hasta creaciones originales.
-          </p>
-        </div>
-
-        <!-- Halloween -->
-        <div class="group cursor-pointer">
-          <div class="aspect-w-3 aspect-h-4 overflow-hidden rounded-lg mb-4">
-            <img
-              src="/images/new_images/Disfraz de caballero templario con túnica blanca, cruz bordada y capa negra – traje medieval artesanal.jpg"
-              alt="Disfraz medieval para halloween"
-              class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
-              loading="lazy"
-              width="400"
-              height="500"
-            />
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Halloween</h3>
-          <p class="text-gray-600 text-sm">
-            Disfraces terroríficos, medievales y de época para una 
-            noche de halloween inolvidable.
           </p>
         </div>
 
