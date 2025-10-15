@@ -1,0 +1,168 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Página no encontrada - Puntadas y Punto | Costura Artesanal Córdoba';
+const description = 'La página que buscas no existe. Descubre nuestros servicios de costura artesanal, clases de patronaje y confección a medida en Córdoba.';
+---
+
+<Layout title={title} description={description} noindex={true}>
+  <!-- Hero Section 404 -->
+  <section class="min-h-screen bg-gradient-to-br from-cream-100 to-cream-200 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Número 404 con animación -->
+      <div class="mb-8">
+        <h1 class="text-8xl sm:text-9xl lg:text-[12rem] font-bold text-burgundy-700 opacity-20 select-none">
+          404
+        </h1>
+      </div>
+
+      <!-- Mensaje principal -->
+      <div class="mb-12">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          ¡Ups! Parece que esta página se ha perdido
+        </h2>
+        <p class="text-lg sm:text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto">
+          Como un hilo que se escapa de la aguja, esta página no está donde debería estar. 
+          Pero no te preocupes, te ayudamos a encontrar lo que buscas.
+        </p>
+      </div>
+
+      <!-- Enlaces útiles -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <a href="/" class="group bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 bg-burgundy-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-burgundy-200 transition-colors">
+            <svg class="w-6 h-6 text-burgundy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2 group-hover:text-burgundy-700 transition-colors">Inicio</h3>
+          <p class="text-gray-600 text-sm">Vuelve a nuestra página principal</p>
+        </a>
+
+        <a href="/servicios/" class="group bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 bg-burgundy-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-burgundy-200 transition-colors">
+            <svg class="w-6 h-6 text-burgundy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2 group-hover:text-burgundy-700 transition-colors">Servicios</h3>
+          <p class="text-gray-600 text-sm">Descubre nuestros servicios de costura</p>
+        </a>
+
+        <a href="/galeria/" class="group bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 bg-burgundy-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-burgundy-200 transition-colors">
+            <svg class="w-6 h-6 text-burgundy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2 group-hover:text-burgundy-700 transition-colors">Galería</h3>
+          <p class="text-gray-600 text-sm">Mira nuestros trabajos más recientes</p>
+        </a>
+
+        <a href="/contacto/" class="group bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 bg-burgundy-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-burgundy-200 transition-colors">
+            <svg class="w-6 h-6 text-burgundy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2 group-hover:text-burgundy-700 transition-colors">Contacto</h3>
+          <p class="text-gray-600 text-sm">Ponte en contacto con nosotros</p>
+        </a>
+
+        <a href="/blog/" class="group bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 bg-burgundy-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-burgundy-200 transition-colors">
+            <svg class="w-6 h-6 text-burgundy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2 group-hover:text-burgundy-700 transition-colors">Blog</h3>
+          <p class="text-gray-600 text-sm">Consejos y trucos de costura</p>
+        </a>
+
+        <a href="/quienes-somos/" class="group bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 bg-burgundy-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-burgundy-200 transition-colors">
+            <svg class="w-6 h-6 text-burgundy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2 group-hover:text-burgundy-700 transition-colors">Quiénes somos</h3>
+          <p class="text-gray-600 text-sm">Conoce nuestra historia</p>
+        </a>
+      </div>
+
+      <!-- Botón principal de acción -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a 
+          href="/" 
+          class="bg-burgundy-700 hover:bg-burgundy-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl"
+        >
+          Volver al inicio
+        </a>
+        <a 
+          href="/contacto/" 
+          class="border-2 border-burgundy-700 text-burgundy-700 hover:bg-burgundy-700 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:scale-105"
+        >
+          Contactar
+        </a>
+      </div>
+
+      <!-- Mensaje de ayuda adicional -->
+      <div class="mt-12 p-6 bg-white bg-opacity-50 rounded-lg backdrop-blur-sm">
+        <p class="text-gray-700 text-sm">
+          <strong>¿Necesitas ayuda?</strong> Si crees que esto es un error, puedes 
+          <a href="/contacto/" class="text-burgundy-700 hover:text-burgundy-800 underline">contactarnos</a> 
+          y te ayudaremos a encontrar lo que buscas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Elementos decorativos flotantes -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <!-- Hilos decorativos -->
+    <div class="absolute top-20 left-10 w-1 h-32 bg-burgundy-200 opacity-30 transform rotate-12 animate-pulse"></div>
+    <div class="absolute top-40 right-20 w-1 h-24 bg-burgundy-300 opacity-20 transform -rotate-12 animate-pulse" style="animation-delay: 1s;"></div>
+    <div class="absolute bottom-32 left-1/4 w-1 h-28 bg-burgundy-200 opacity-25 transform rotate-45 animate-pulse" style="animation-delay: 2s;"></div>
+    
+    <!-- Agujas decorativas -->
+    <div class="absolute top-1/3 right-1/4 w-2 h-16 bg-burgundy-400 opacity-20 transform rotate-45 animate-pulse" style="animation-delay: 0.5s;"></div>
+    <div class="absolute bottom-1/4 right-10 w-2 h-12 bg-burgundy-300 opacity-30 transform -rotate-12 animate-pulse" style="animation-delay: 1.5s;"></div>
+  </div>
+</Layout>
+
+<style>
+  /* Animaciones personalizadas */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+  }
+  
+  /* Efecto de hover mejorado para las tarjetas */
+  .group:hover .group-hover\:scale-105 {
+    transform: scale(1.05);
+  }
+  
+  /* Transiciones suaves */
+  * {
+    transition: all 0.3s ease;
+  }
+</style>
