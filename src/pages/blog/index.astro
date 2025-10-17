@@ -152,7 +152,16 @@ const blogSchema = {
             en costura directamente en tu email.
           </p>
           
-          <form class="space-y-4">
+          <form class="space-y-4" action="https://formsubmit.co/lolapedraza@hotmail.es" method="POST">
+            <!-- FormSubmit configuration -->
+            <input type="hidden" name="_next" value="https://puntadasypunto.es/blog/?suscrito=true">
+            <input type="hidden" name="_subject" value="Nueva suscripción al newsletter - Puntadas y Punto">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            
+            <!-- Honeypot field (hidden) -->
+            <input type="text" name="_honey" style="display: none;" />
+            
             <div>
               <label for="email" class="sr-only">Email</label>
               <input
@@ -270,3 +279,67 @@ const blogSchema = {
     </div>
   </section>
 </Layout>
+
+<script>
+  // Manejar mensaje de confirmación de suscripción
+  document.addEventListener('DOMContentLoaded', function() {
+    // Verificar si se suscribió correctamente
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('suscrito') === 'true') {
+      // Crear y mostrar mensaje de éxito
+      const successMessage = document.createElement('div');
+      successMessage.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg z-50 max-w-sm';
+      successMessage.innerHTML = `
+        <div class="flex items-center space-x-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+          <div>
+            <h4 class="font-semibold">¡Suscripción exitosa!</h4>
+            <p class="text-sm">Te mantendremos informado de nuestros consejos</p>
+          </div>
+        </div>
+      `;
+      
+      document.body.appendChild(successMessage);
+      
+      // Ocultar el mensaje después de 5 segundos
+      setTimeout(() => {
+        successMessage.style.opacity = '0';
+        successMessage.style.transform = 'translateX(100%)';
+        setTimeout(() => successMessage.remove(), 300);
+      }, 5000);
+      
+      // Limpiar la URL
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+    
+    // Validación del formulario de newsletter
+    const newsletterForm = document.querySelector('form[action*="formsubmit"]');
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', function(e) {
+        const honeypot = newsletterForm.querySelector('input[name="_honey"]') as HTMLInputElement;
+        if (honeypot && honeypot.value !== '') {
+          e.preventDefault();
+          return false;
+        }
+        
+        // Mostrar indicador de carga
+        const submitButton = newsletterForm.querySelector('button[type="submit"]') as HTMLButtonElement;
+        if (submitButton) {
+          const originalText = submitButton.textContent || 'Suscribirme';
+          submitButton.textContent = 'Suscribiendo...';
+          submitButton.disabled = true;
+          
+          // Restaurar botón después de 3 segundos (por si hay error)
+          setTimeout(() => {
+            if (submitButton) {
+              submitButton.textContent = originalText;
+              submitButton.disabled = false;
+            }
+          }, 3000);
+        }
+      });
+    }
+  });
+</script>
